@@ -94,6 +94,11 @@ export const SectionHeader = styled.h2`
 
 export const ColumnedLists = styled.div`
 	display: flex;
+	flex-direction: row;
+
+	@media only screen and (max-width: 675px) {
+		flex-direction: column;
+	}
 `
 
 export const BulletedList = styled.ul`
