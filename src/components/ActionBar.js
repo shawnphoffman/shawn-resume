@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { transition } from './StyledComponents'
 
@@ -10,9 +11,20 @@ const Container = styled.header`
 	position: absolute;
 	top: 16px;
 	left: 16px;
+	display: flex;
+	flex-direction: column;
 
 	:hover {
 		cursor: pointer;
+	}
+
+	/* TODO - This is so hacky. Come up with a better mobile solution and stop being lazy 🤣️ */
+	@media only screen and (max-width: 920px) {
+		flex-direction: row;
+	}
+
+	@media only screen and (max-width: 675px) {
+		display: none;
 	}
 
 	@media print {
@@ -23,6 +35,7 @@ const Container = styled.header`
 const ThemeIcon = styled.div`
 	font-size: 24px;
 	color: ${props => props.theme.themeIcons};
+	margin-right: 8px;
 	${transition};
 
 	:hover {
@@ -36,13 +49,13 @@ const mql = window.matchMedia('(prefers-color-scheme: dark)')
 // TODO - Come up with some dark mode colors and automatically display the dark version when appropriate
 //
 
-const ThemeSelector = ({ onClick }) => {
+const ActionBar = ({ onThemeClick }) => {
 	// Callback to change theme based on OS preference change
 	const handlePreferenceChange = React.useCallback(
 		e => {
-			onClick(e.matches ? darkTheme : lightTheme)
+			onThemeClick(e.matches ? darkTheme : lightTheme)
 		},
-		[onClick]
+		[onThemeClick]
 	)
 
 	// Effect that listens for OS light/dark pref changes
@@ -56,22 +69,34 @@ const ThemeSelector = ({ onClick }) => {
 
 	return (
 		<Container>
-			<ThemeIcon title="Light Theme" onClick={() => onClick(lightTheme)}>
+			<ThemeIcon title="Light Theme" onClick={() => onThemeClick(lightTheme)}>
 				<i className="fas fa-sun"></i>
 				{/* Light */}
 			</ThemeIcon>
-			<ThemeIcon title="Dark Theme" onClick={() => onClick(darkTheme)}>
+			<ThemeIcon title="Dark Theme" onClick={() => onThemeClick(darkTheme)}>
 				<i className="fas fa-moon"></i>
 				{/* Dark */}
 			</ThemeIcon>
-			<ThemeIcon title="Hotdog Stand Theme" onClick={() => onClick(hotdogTheme)}>
-				<i className="fas fa-hotdog"></i>
+			<ThemeIcon title="Hotdog Stand Theme" onClick={() => onThemeClick(hotdogTheme)}>
+				<i className="fas fa-sausage"></i>
 				{/* Hotdog */}
 			</ThemeIcon>
-			{/* <div>Prefers Dark: {prefersDarkMode ? 'True' : 'False'}</div> */}
+			<br />
+			{/* GitHub Link */}
+			<ThemeIcon
+				title="View Source on GitHub"
+				as="a"
+				href="https://github.com/shawnphoffman/resume"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<i className="fab fa-github"></i>
+			</ThemeIcon>
 		</Container>
 	)
 }
-ThemeSelector.propTypes = {}
+ActionBar.propTypes = {
+	onThemeClick: PropTypes.func,
+}
 
-export default ThemeSelector
+export default ActionBar

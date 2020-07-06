@@ -1,9 +1,11 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
+
+// Themes
 import lightTheme from '../themes/base'
 
 // Components
-import ThemeSelector from '../components/ThemeSelector'
+import ActionBar from '../components/ActionBar'
 import Divider from '../components/Divider'
 import {
 	DocumentWrapper,
@@ -33,12 +35,15 @@ import useDetectPrint from '../hooks/useDetectPrint'
 import usePersistedState from '../hooks/usePersistedState'
 
 function App() {
+	// Persist theme selection in localstorage and load appropriately
 	const [theme, setTheme] = usePersistedState(lightTheme, 'theme')
+
+	// Detect print command to load light theme
 	const isPrinting = useDetectPrint()
 
 	return (
 		<ThemeProvider theme={isPrinting ? lightTheme : theme}>
-			<ThemeSelector onClick={setTheme} />
+			<ActionBar onThemeClick={setTheme} />
 			<DocumentWrapper>
 				<Document>
 					{/*  */}
