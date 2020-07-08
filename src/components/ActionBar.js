@@ -49,7 +49,19 @@ const mql = window.matchMedia('(prefers-color-scheme: dark)')
 // TODO - Come up with some dark mode colors and automatically display the dark version when appropriate
 //
 
-const ActionBar = ({ onThemeClick }) => {
+const ActionBar = ({ onThemeClick, onPrint }) => {
+	// NOTE - This function is HORRIBLE and not a good practice.
+	// Chrome locks up when you try to put window.print inside a timeout so I'm using a Promise to
+	// mimic the behavior. This is done because some browsers attempt to print before the print
+	// detection fires and adjusts the theme. window.print() was opening the print dialog without the
+	// CSS print media
+	const handlePrint = React.useCallback(() => {
+		onPrint(true)
+		new Promise(resolve => {
+			setTimeout(resolve, 0)
+		}).then(() => window.print())
+	}, [onPrint])
+
 	// Callback to change theme based on OS preference change
 	const handlePreferenceChange = React.useCallback(
 		e => {
@@ -91,6 +103,10 @@ const ActionBar = ({ onThemeClick }) => {
 				rel="noopener noreferrer"
 			>
 				<i className="fab fa-github"></i>
+			</ThemeIcon>
+			{/* Print */}
+			<ThemeIcon title="Print" onClick={() => handlePrint()}>
+				<i className="fas fa-print" />
 			</ThemeIcon>
 		</Container>
 	)

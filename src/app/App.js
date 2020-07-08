@@ -39,11 +39,11 @@ function App() {
 	const [theme, setTheme] = usePersistedState(lightTheme, 'theme')
 
 	// Detect print command to load light theme
-	const isPrinting = useDetectPrint()
+	const { isPrinting, setIsPrinting } = useDetectPrint()
 
 	return (
 		<ThemeProvider theme={isPrinting ? lightTheme : theme}>
-			<ActionBar onThemeClick={setTheme} />
+			<ActionBar onThemeClick={setTheme} onPrint={setIsPrinting} />
 			<DocumentWrapper>
 				<Document>
 					{/*  */}

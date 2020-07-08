@@ -14,7 +14,7 @@ function useDetectPrint() {
 		return () => printMq.removeListener(mqEvent)
 	}, [])
 
-	return isPrinting
+	return { isPrinting, setIsPrinting }
 }
 
 export default useDetectPrint
