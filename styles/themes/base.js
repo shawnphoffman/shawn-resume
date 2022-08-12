@@ -1,4 +1,4 @@
-export default {
+const baseTheme = {
 	name: 'Light',
 	background: '#F0F2F5',
 	contentBackground: '#FFF',
@@ -9,3 +9,4 @@ export default {
 	sectionHeader: '#133053',
 	themeIcons: '#0003',
 }
+export default baseTheme

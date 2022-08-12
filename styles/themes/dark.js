@@ -1,4 +1,4 @@
-export default {
+const darkTheme = {
 	name: 'Dark',
 	background: '#18191a',
 	contentBackground: '#242526',
@@ -9,3 +9,4 @@ export default {
 	sectionHeader: '#F77',
 	themeIcons: '#FFF3',
 }
+export default darkTheme

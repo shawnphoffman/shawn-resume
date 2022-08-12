@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 function useDetectPrint() {
 	const [isPrinting, setIsPrinting] = useState(false)
@@ -6,7 +6,6 @@ function useDetectPrint() {
 	useEffect(() => {
 		const printMq = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('print')
 		const mqEvent = mqList => {
-			console.log('CHANGE')
 			setIsPrinting(!!mqList.matches)
 		}
 

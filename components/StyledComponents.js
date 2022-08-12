@@ -1,8 +1,4 @@
-// NOTE I don't normally extract the styled-components out like this but there were so many but they
-// don't justify having their own files.
-import styled from 'styled-components'
-
-export const transition = `transition: all 0.25s linear`
+import { styled } from 'linaria/react'
 
 export const NoPrint = styled.div`
 	@media print {
@@ -23,12 +19,11 @@ export const DocumentWrapper = styled.div`
 	justify-content: center;
 	height: 100%;
 	width: 100vw;
-	background: ${props => props.theme.background};
-	/* ${transition}; */
+	background: var(--background);
 `
 
 export const Document = styled.div`
-	background-color: ${props => props.theme.contentBackground};
+	background-color: var(--contentBackground);
 	display: flex;
 	flex-direction: column;
 	overflow: auto;
@@ -41,10 +36,10 @@ export const Document = styled.div`
 	margin-top: 16px;
 	margin-bottom: 32px;
 	padding: 8px 24px;
-	box-shadow: ${props => props.theme.boxShadow} 0px 1px 2px 0px;
+	box-shadow: var(--boxShadow) 0px 1px 2px 0px;
 	border-radius: 8px;
-	color: ${props => props.theme.content};
-	${transition};
+	color: var(--content);
+	transition: var(--transition);
 
 	@media print {
 		margin: unset;
@@ -58,7 +53,7 @@ export const Title = styled.h1`
 	text-align: center;
 	font-family: 'Bungee Inline', 'Open Sans';
 	font-weight: normal;
-	color: ${props => props.theme.title};
+	color: var(--title);
 	font-size: 42px;
 	margin-top: 0;
 	margin-right: 0;
@@ -84,7 +79,7 @@ export const ContactContainer = styled.div`
 export const SectionHeader = styled.h2`
 	font-size: 20px;
 	text-transform: uppercase;
-	color: ${props => props.theme.sectionHeader};
+	color: var(--sectionHeader);
 	margin: 0px;
 
 	@media print {

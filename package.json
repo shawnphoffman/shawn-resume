@@ -1,27 +1,20 @@
 {
 	"name": "resume",
-	"homepage": "https://shawnphoffman.github.io/resume",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"@testing-library/jest-dom": "^5.16.4",
-		"@testing-library/react": "^13.3.0",
-		"@testing-library/user-event": "^14.2.0",
+		"linaria": "^4.1.2",
+		"next": "^12.2.5",
+		"next-linaria": "^0.11.0",
 		"react": "^18.1.0",
 		"react-dom": "^18.1.0",
-		"react-scripts": "5.0.1",
 		"styled-components": "^5.3.5"
 	},
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"predeploy": "yarn build",
-		"deploy": "gh-pages -d build"
-	},
-	"eslintConfig": {
-		"extends": "react-app"
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
 	},
 	"browserslist": {
 		"production": [
@@ -36,6 +29,8 @@
 		]
 	},
 	"devDependencies": {
-		"gh-pages": "^4.0.0"
+		"eslint": "^8.21.0",
+		"eslint-config-next": "^12.2.5",
+		"eslint-plugin-simple-import-sort": "^7.0.0"
 	}
 }

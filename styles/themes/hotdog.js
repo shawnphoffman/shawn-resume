@@ -1,4 +1,4 @@
-export default {
+const hotdogTheme = {
 	name: 'Hotdog Stand',
 	background: '#F00',
 	contentBackground: '#FF0',
@@ -9,3 +9,4 @@ export default {
 	sectionHeader: '#000',
 	themeIcons: '#FF0C',
 }
+export default hotdogTheme
