@@ -30,7 +30,7 @@ export const Document = styled.div`
 	width: 100%;
 	height: 100%;
 	min-height: 200px;
-	min-width: 480px;
+	min-width: 320px;
 	/* max-width: 980px; */
 	max-width: 820px;
 	margin-top: 16px;
