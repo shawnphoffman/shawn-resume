@@ -56,10 +56,11 @@ export default function Resume() {
 					{/* Focus / Objective */}
 					<SectionHeader>Focus</SectionHeader>
 					<PlainText>
-						Hard-working software development professional with specialized experience in front-end development, engineering management, and
+						This is extremely out of date so I am removing it, for now.
+						{/* Hard-working software development professional with specialized experience in front-end development, engineering management, and
 						emotional awareness supported by a Degree from Purdue University seeking a challenging and rewarding experience with a
 						forward-thinking and fast-paced company. With a diverse work history and a passion for new challenges, I can bring a unique
-						perspective and valuable experience to any project that I undertake.
+						perspective and valuable experience to any project that I undertake. */}
 					</PlainText>
 					<Divider />
 					{/*  */}
@@ -80,6 +81,14 @@ export default function Resume() {
 					{/*  */}
 					{/* Relevant Employment */}
 					<SectionHeader>Relevant Employment</SectionHeader>
+					{/* Coinbase */}
+					<Stint>
+						<Company>Coinbase</Company>
+						<Position>
+							<PositionName>Software Engineer</PositionName>
+							<PositionDate>October 2020 - Current</PositionDate>
+						</Position>
+					</Stint>
 					{/* DySi */}
 					<Stint>
 						<Company>Dynamic Signal</Company>
