@@ -56,11 +56,10 @@ export default function Resume() {
 					{/* Focus / Objective */}
 					<SectionHeader>Focus</SectionHeader>
 					<PlainText>
-						This is extremely out of date so I am removing it, for now.
-						{/* Hard-working software development professional with specialized experience in front-end development, engineering management, and
-						emotional awareness supported by a Degree from Purdue University seeking a challenging and rewarding experience with a
+						Hard-working software development professional with specialized experience in front-end development, engineering management, and
+						emotional awareness supported by years of hands-on experience seeking a challenging and rewarding opportunity with a
 						forward-thinking and fast-paced company. With a diverse work history and a passion for new challenges, I can bring a unique
-						perspective and valuable experience to any project that I undertake. */}
+						perspective and valuable experience to any project that I undertake.
 					</PlainText>
 					<Divider />
 					{/*  */}
@@ -81,12 +80,33 @@ export default function Resume() {
 					{/*  */}
 					{/* Relevant Employment */}
 					<SectionHeader>Relevant Employment</SectionHeader>
+					{/* Sabbatical */}
+					<Stint>
+						<Company>Sabbatical</Company>
+						<Position>
+							<PositionDate>September 2022 - June 2023</PositionDate>
+						</Position>
+					</Stint>
 					{/* Coinbase */}
 					<Stint>
 						<Company>Coinbase</Company>
 						<Position>
-							<PositionName>Software Engineer</PositionName>
-							<PositionDate>October 2020 - Current</PositionDate>
+							<PositionName>Senior Software Engineer</PositionName>
+							<PositionDate>October 2020 - September 2022</PositionDate>
+							<BulletedList>
+								<li>Led the front-end decomposition of Coinbase-wide login from Rails monolith to React application login.coinbase.com.</li>
+								<li>
+									Converted mobile application native login flows over to web-based login experience; reducing surfaces for future changes
+									and deployment times.
+								</li>
+								<li>
+									Mentored incoming software engineers on best practices, code quality, career coaching, and criteria for advancement.
+								</li>
+								<li>Added registration and wallet support for ENS names throughout custodial wallet browser extensions.</li>
+								<li>
+									Work extensively on mission-critical decomposition project, moving frontend applications out of legacy Rails monolith.
+								</li>
+							</BulletedList>
 						</Position>
 					</Stint>
 					{/* DySi */}
@@ -180,7 +200,7 @@ export default function Resume() {
 					<SectionHeader>Technical Experience</SectionHeader>
 					<ColumnedLists>
 						<BulletedList>
-							<li>JavaScript / React / Redux / ES6</li>
+							<li>JavaScript / TypeScript / React / ES6</li>
 							<li>Webpack / Jest / Enzyme / Storybook</li>
 							<li>C# / .NET Core / .NET Standard / MVC</li>
 						</BulletedList>
@@ -220,6 +240,11 @@ export default function Resume() {
 						<Divider />
 						<SectionHeader>References</SectionHeader>
 						<PlainText>Reaching out to references is encouraged and can be provided upon request.</PlainText>
+						<BulletedList>
+							<li>
+								<a href="https://shawn.party/">Check out my personal website (https://shawn.party) for some of my other projects</a>
+							</li>
+						</BulletedList>
 					</NoPrint>
 				</Document>
 			</DocumentWrapper>
