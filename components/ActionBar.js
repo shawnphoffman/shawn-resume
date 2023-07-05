@@ -68,20 +68,20 @@ const ActionBar = () => {
 	return (
 		<Container>
 			<ThemeIcon title="Light Theme" onClick={() => handleClick('light')}>
-				<i className="fas fa-sun"></i>
+				<i className="fas fa-sun-cloud"></i>
 				{/* Light */}
 			</ThemeIcon>
 			<ThemeIcon title="Dark Theme" onClick={() => handleClick('dark')}>
-				<i className="fas fa-moon"></i>
+				<i className="fas fa-clouds-moon"></i>
 				{/* Dark */}
 			</ThemeIcon>
 			<ThemeIcon title="Hotdog Stand Theme" onClick={() => handleClick('hotdog')}>
-				<i className="fas fa-sausage"></i>
+				<i className="fas fa-hotdog"></i>
 				{/* Hotdog */}
 			</ThemeIcon>
 			<br />
 			{/* GitHub Link */}
-			<ThemeIcon
+			{/* <ThemeIcon
 				title="View Source on GitHub"
 				as="a"
 				href="https://github.com/shawnphoffman/resume"
@@ -89,7 +89,7 @@ const ActionBar = () => {
 				rel="noopener noreferrer"
 			>
 				<i className="fab fa-github"></i>
-			</ThemeIcon>
+			</ThemeIcon> */}
 			{/* Print */}
 			{/* <ThemeIcon title="Print" onClick={() => handlePrint()}>
 				<i className="fas fa-print"></i>

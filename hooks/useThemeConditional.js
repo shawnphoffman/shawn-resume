@@ -10,8 +10,9 @@ const dark = css`
 	--boxShadow: #0003;
 	--content: #fff;
 	--divider: #555;
-	--title: #f33;
-	--sectionHeader: #f77;
+	--title: #706fd3;
+	--sectionHeader: #34ace0;
+	--positionName: #33d9b2;
 	--themeIcons: #fff3;
 	${common}
 `
@@ -24,6 +25,7 @@ const light = css`
 	--divider: #d6d5d5;
 	--title: #133053;
 	--sectionHeader: #133053;
+	--positionName: #133053;
 	--themeIcons: #0003;
 	${common}
 `
@@ -36,6 +38,7 @@ const hotdog = css`
 	--divider: #f00;
 	--title: #000;
 	--sectionHeader: #000;
+	--positionName: #f00;
 	--themeIcons: #ff0c;
 	${common}
 `

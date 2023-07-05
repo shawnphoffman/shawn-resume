@@ -131,6 +131,7 @@ export const PositionName = styled.h4`
 	margin: 0;
 	display: inline-block;
 	margin-right: 8px;
+	color: var(--positionName);
 
 	&::after {
 		content: ',';
@@ -139,6 +140,7 @@ export const PositionName = styled.h4`
 
 export const PositionDate = styled.span`
 	font-style: italic;
+	font-size: 13px;
 `
 
 export const EducationStint = styled.div`
@@ -151,17 +153,16 @@ export const Accomplishment = styled.h3`
 	margin: 0;
 	font-size: 13px;
 	display: inline-block;
-	margin-right: 4px;
+	margin-right: 8px;
+	color: var(--positionName);
 
-	&::after {
-		content: ',';
-	}
-`
-
-export const TrainingLocation = styled.span`
-	display: inline-block;
+	// &::after {
+	// 	content: ',';
+	// }
 `
 
 export const TrainingDate = styled.span`
 	display: inline-block;
+	font-style: italic;
+	font-size: 13px;
 `

@@ -22,7 +22,6 @@ import {
 	Stint,
 	Title,
 	TrainingDate,
-	TrainingLocation,
 } from 'components/StyledComponents'
 import useDetectPrint from 'hooks/useDetectPrint'
 
@@ -44,27 +43,26 @@ export default function Resume() {
 						{isPrinting && (
 							<>
 								<div>{window.atob('c2hhd24ucC5ob2ZmbWFuQGdtYWlsLmNvbQ')}</div>
+								<a href="https://shawn.party">https://shawn.party</a>
 								<div>{window.atob('MzE3LjYwNC4wMzI1')}</div>
 							</>
 						)}
-						<div>
-							<a href="https://linkedin.com/in/shawnphoffman">linkedin.com/in/shawnphoffman</a>
-						</div>
+						<div></div>
 					</ContactContainer>
 					<Divider />
 					{/*  */}
 					{/* Focus / Objective */}
-					<SectionHeader>Focus</SectionHeader>
+					{/* <SectionHeader>Focus</SectionHeader>
 					<PlainText>
 						Hard-working software development professional with specialized experience in front-end development, engineering management, and
 						emotional awareness supported by years of hands-on experience seeking a challenging and rewarding opportunity with a
 						forward-thinking and fast-paced company. With a diverse work history and a passion for new challenges, I can bring a unique
 						perspective and valuable experience to any project that I undertake.
 					</PlainText>
-					<Divider />
+					<Divider /> */}
 					{/*  */}
 					{/* Skills */}
-					<SectionHeader>Areas of Skill and Knowledge</SectionHeader>
+					{/* <SectionHeader>Areas of Skill and Knowledge</SectionHeader>
 					<ColumnedLists>
 						<BulletedList>
 							<li>Highly effective interpersonal skills.</li>
@@ -76,17 +74,17 @@ export default function Resume() {
 							<li>Creative, resourceful, and full of innovative ideas.</li>
 						</BulletedList>
 					</ColumnedLists>
-					<Divider />
+					<Divider /> */}
 					{/*  */}
 					{/* Relevant Employment */}
 					<SectionHeader>Relevant Employment</SectionHeader>
 					{/* Sabbatical */}
-					<Stint>
+					{/* <Stint>
 						<Company>Sabbatical</Company>
 						<Position>
 							<PositionDate>September 2022 - June 2023</PositionDate>
 						</Position>
-					</Stint>
+					</Stint> */}
 					{/* Coinbase */}
 					<Stint>
 						<Company>Coinbase</Company>
@@ -94,18 +92,16 @@ export default function Resume() {
 							<PositionName>Senior Software Engineer</PositionName>
 							<PositionDate>October 2020 - September 2022</PositionDate>
 							<BulletedList>
-								<li>Led the front-end decomposition of Coinbase-wide login from Rails monolith to React application login.coinbase.com.</li>
 								<li>
-									Converted mobile application native login flows over to web-based login experience; reducing surfaces for future changes
-									and deployment times.
+									Led the front-end decomposition of Coinbase-wide login from Rails monolith to React application (
+									<a href="https://login.coinbase.com">login.coinbase.com</a>).
 								</li>
+								<li>Converted mobile app native login to web-based login experience; reduced future duplicated and deployment times.</li>
+								<li>Added registration and profile support for decentralized identity ENS names through Wallet browser extension.</li>
 								<li>
 									Mentored incoming software engineers on best practices, code quality, career coaching, and criteria for advancement.
 								</li>
-								<li>Added registration and wallet support for ENS names throughout custodial wallet browser extensions.</li>
-								<li>
-									Work extensively on mission-critical decomposition project, moving frontend applications out of legacy Rails monolith.
-								</li>
+								<li>Worked extensively decomposing frontend out of legacy Rails monolith into their own modern applications.</li>
 							</BulletedList>
 						</Position>
 					</Stint>
@@ -131,16 +127,13 @@ export default function Resume() {
 								<li>
 									Created a desktop application and build tool in an effort to drive end user engagement and combat legacy browser usage.
 								</li>
+								<li>Applied best practices and an empathetic approach when creating a swim lane process that helped engineering scale.</li>
 								<li>
-									Applied best practices and an empathetic approach when creating a swim lane process that will help engineering scale.
+									Architected, organized, and managed ambitious scripting engine project; making integrations quick and easy to deliver.
 								</li>
+								<li>Awarded company MVP Q4 2018 from individually submitted feedback and team nominations.</li>
 								<li>
-									Architected, organized, and managed ambitious scripting engine project; making integrations quicker and easier to deliver.
-								</li>
-								<li>Awarded company MVP Q4 2018 from individually submitted feedback and nominations.</li>
-								<li>
-									Organized first internal hackathon from concept to actual execution, leading to multiple entries being added to the
-									product.
+									Organized first internal hackathon from concept to execution, leading to multiple entries being added to the product.
 								</li>
 							</BulletedList>
 						</Position>
@@ -150,32 +143,34 @@ export default function Resume() {
 							<BulletedList>
 								<li>Standardized public API development and created the user interface and tooling for generated API documentation.</li>
 								<li>
-									Founded the internal “Culture Committee” that focuses on promoting positive company culture and inclusion across offices.
+									Founded the internal “Culture Committee”, focused on promoting positive company culture and inclusion across offices.
 								</li>
 							</BulletedList>
 						</Position>
 					</Stint>
 					{/* ADESA */}
 					<Stint>
-						<Company>ADESA / AutoVIN (Consultant via Sogeti)</Company>
+						<Company>ADESA / AutoVIN</Company>
 						<Position>
-							<PositionName>Contract Developer and Scrum Master</PositionName>
+							<PositionName>Developer Consultant and Scrum Master</PositionName>
 							<PositionDate>August 2012 - June 2015</PositionDate>
-							<BulletedList>
-								<li>
-									Designed enterprise web portal for creating and managing variable pricing engine across all auctions and business units.
-								</li>
-								<li>Upgraded business-critical web front-end from MVC 2 to MVC 5.2 and converted all content from ASP Forms to Razor.</li>
-								<li>
-									Refactored entire application from page-specific CSS to a globally consolidated LESS structure utilizing common variables.
-								</li>
-								<li>
-									Developed unique workflow for efficient vehicle identification based on manufacturer build data and process improvement.
-								</li>
-								<li>Led development team in technical effort to utilize modern Azure capabilities as well as optimize web performance</li>
-								<li>Implemented an enterprise-wide, customer-facing, industry-standard grading system for remarketed vehicles.</li>
-								<li>Researched and documented architecture and design principles for inherited large-scale ExtJS web application.</li>
-							</BulletedList>
+
+							<NoPrint>
+								<BulletedList>
+									<li>
+										Designed enterprise web portal for creating and managing variable pricing engine across all auctions and business units.
+									</li>
+									<li>Upgraded business-critical web front-end from MVC 2 to MVC 5.2 and converted all content from ASP Forms to Razor.</li>
+									<li>
+										Refactored entire application from page-specific CSS to a globally consolidated LESS structure utilizing common
+										variables.
+									</li>
+									<li>Developed workflow for efficient vehicle identification based on manufacturer build data and process improvement.</li>
+									<li>Led development team in technical effort to utilize modern Azure capabilities as well as optimize web performance</li>
+									<li>Implemented an enterprise-wide, customer-facing, industry-standard grading system for remarketed vehicles.</li>
+									<li>Researched and documented architecture and design principles for inherited large-scale ExtJS web application.</li>
+								</BulletedList>
+							</NoPrint>
 						</Position>
 					</Stint>
 					{/* Sogeti */}
@@ -197,10 +192,10 @@ export default function Resume() {
 					<Divider />
 					{/*  */}
 					{/* Technical Experience */}
-					<SectionHeader>Technical Experience</SectionHeader>
+					<SectionHeader>Buzzword Experience</SectionHeader>
 					<ColumnedLists>
 						<BulletedList>
-							<li>JavaScript / TypeScript / React / ES6</li>
+							<li>JavaScript / TypeScript / React / NextJS</li>
 							<li>Webpack / Jest / Enzyme / Storybook</li>
 							<li>C# / .NET Core / .NET Standard / MVC</li>
 						</BulletedList>
@@ -222,7 +217,6 @@ export default function Resume() {
 					{/* Purdue */}
 					<EducationStint>
 						<Accomplishment>Purdue University</Accomplishment>
-						<TrainingLocation>West Lafayette &amp; Kokomo</TrainingLocation>
 						<TrainingDate>May 2012</TrainingDate>
 						<BulletedList>
 							<li>Bachelors Degree from the School of Technology: Computer and Information Technology</li>
@@ -231,12 +225,58 @@ export default function Resume() {
 					{/* CSM */}
 					<EducationStint>
 						<Accomplishment>Certified Scrum Master</Accomplishment>
-						<TrainingLocation>Scrum Alliance</TrainingLocation>
 						<TrainingDate>September 2014</TrainingDate>
 					</EducationStint>
+					<Divider />
 					{/*  */}
+
+					{/* Fun */}
+					<SectionHeader>Fun Stuff</SectionHeader>
+					<Position>
+						<PositionName>Sabbatical</PositionName>
+						<PositionDate>October 2022 - July 2023</PositionDate>
+						<BulletedList>
+							<li>Took a 4-week road trip across the country; visiting National Parks, family, friends, and amazing food.</li>
+							<li>
+								Focused a lot of my time as a 2023 PCT Trail Angel, supporting hikers with food, lodging, and &quot;trail magic&quot;.
+							</li>
+							<li>
+								Created free LinkTree-alternative NextJS websites for some friend&apos;s podcasts (
+								<a target="_blank" href="https://blueharvest.rocks" rel="noreferrer">
+									Blue Harvest
+								</a>{' '}
+								&amp;{' '}
+								<a target="_blank" href="https://jammedtransmissions.com" rel="noreferrer">
+									Jammed Transmissions
+								</a>
+								).
+							</li>
+							<li>Started streaming games and model-building on Twitch, reaching Affiliate within 2 months.</li>
+							<li>
+								Built a separate Star Wars Celebration companion website, making it easier to plan your convention with official and
+								unofficial events.
+							</li>
+							<li>Developed nonsensical Twitch and Discord bots for some friends podcast and live-stream community.</li>
+							<li>
+								Put together a{' '}
+								<a target="_blank" href="https://obs.shawn.party/" rel="noreferrer">
+									handful of free web-based text helpers
+								</a>{' '}
+								for small-scale streamers to use in OBS.
+							</li>
+							<li>
+								Refactored{' '}
+								<a target="_blank" href="https://blog.shawn.party/" rel="noreferrer">
+									my blog
+								</a>{' '}
+								to make it easier to document and share my never-ending side projects.
+							</li>
+						</BulletedList>
+					</Position>
+					{/*  */}
+
 					{/* References */}
-					<NoPrint>
+					{/* <NoPrint>
 						<Divider />
 						<SectionHeader>References</SectionHeader>
 						<PlainText>Reaching out to references is encouraged and can be provided upon request.</PlainText>
@@ -245,7 +285,7 @@ export default function Resume() {
 								<a href="https://shawn.party/">Check out my personal website (https://shawn.party) for some of my other projects</a>
 							</li>
 						</BulletedList>
-					</NoPrint>
+					</NoPrint> */}
 				</Document>
 			</DocumentWrapper>
 			{/* </ThemeProvider> */}

@@ -31,6 +31,6 @@ code {
 }
 
 a {
-	color: unset;
+	color: var(--positionName);
 	text-decoration: none;
 }
