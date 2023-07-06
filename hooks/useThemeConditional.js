@@ -23,9 +23,9 @@ const light = css`
 	--boxShadow: #0003;
 	--content: #000;
 	--divider: #d6d5d5;
-	--title: #133053;
-	--sectionHeader: #133053;
-	--positionName: #133053;
+	--title: #30336b;
+	--sectionHeader: #273c75;
+	--positionName: #3b3b98;
 	--themeIcons: #0003;
 	${common}
 `
