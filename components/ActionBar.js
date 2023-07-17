@@ -38,6 +38,10 @@ const ActionBar = () => {
 				{/* Hotdog */}
 				<i className="fas fa-hotdog"></i>
 			</div>
+			<div className={styles.actionIcon} title="High Contrast Theme" onClick={() => handleClick('theme-contrast')}>
+				{/* Hotdog */}
+				<i className="fas fa-circle-half-stroke"></i>
+			</div>
 			<br />
 			{/* GitHub Link */}
 			{/* <div className={styles.actionIcon}

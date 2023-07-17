@@ -9,6 +9,7 @@
 	--sectionHeader: #273c75;
 	--positionName: #3b3b98;
 	--themeIcons: #0003;
+	--dividerFill: transparent;
 }
 .theme-dark {
 	--background: #18191a;
@@ -20,6 +21,7 @@
 	--sectionHeader: #34ace0;
 	--positionName: #33d9b2;
 	--themeIcons: #fff3;
+	--dividerFill: transparent;
 }
 .theme-hotdog {
 	--background: #f00;
@@ -31,6 +33,19 @@
 	--sectionHeader: #000;
 	--positionName: #f00;
 	--themeIcons: #ff0c;
+	--dividerFill: transparent;
+}
+.theme-contrast {
+	--background: #fff;
+	--contentBackground: #fff;
+	--boxShadow: rgba(0, 0, 0, 0);
+	--content: #000;
+	--divider: #000;
+	--title: #30336b;
+	--sectionHeader: #000;
+	--positionName: #30336b;
+	--themeIcons: #30336b;
+	--dividerFill: #000;
 }
 @media print {
 	[class^='theme-'] {
