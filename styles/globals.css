@@ -1,33 +1,61 @@
-/* * {
-	box-sizing: border-box;
-	font-family: 'Open Sans', sans-serif;
+/* Themes */
+.theme-light {
+	--background: #f0f2f5;
+	--contentBackground: #fff;
+	--boxShadow: #0003;
+	--content: #000;
+	--divider: #d6d5d5;
+	--title: #30336b;
+	--sectionHeader: #273c75;
+	--positionName: #3b3b98;
+	--themeIcons: #0003;
+}
+.theme-dark {
+	--background: #18191a;
+	--contentBackground: #242526;
+	--boxShadow: #0003;
+	--content: #fff;
+	--divider: #555;
+	--title: #706fd3;
+	--sectionHeader: #34ace0;
+	--positionName: #33d9b2;
+	--themeIcons: #fff3;
+}
+.theme-hotdog {
+	--background: #f00;
+	--contentBackground: #ff0;
+	--boxShadow: #0003;
+	--content: #000;
+	--divider: #f00;
+	--title: #000;
+	--sectionHeader: #000;
+	--positionName: #f00;
+	--themeIcons: #ff0c;
+}
+@media print {
+	[class^='theme-'] {
+		--background: #f0f2f5;
+		--contentBackground: #fff;
+		--boxShadow: #0003;
+		--content: #000;
+		--divider: #d6d5d5;
+		--title: #30336b;
+		--sectionHeader: #273c75;
+		--positionName: #3b3b98;
+		--themeIcons: #0003;
+	}
 }
 
-html body {
-	font-size: 16px;
-	padding: 0;
-	margin: 0;
-	width: 100vw;
-	font-family: 'Open Sans', sans-serif;
-	box-sizing: border-box;
+[class^='theme-'] {
+	--transition: all 0.25s linear;
 }
 
-#root {
-	width: 100%;
-	height: 100%;
-} */
-
-/*  */
 body {
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-size: 14px;
-}
-
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 a {

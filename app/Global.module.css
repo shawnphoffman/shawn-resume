@@ -1,28 +1,27 @@
-import { styled } from 'linaria/react'
-
-export const NoPrint = styled.div`
-	@media print {
+@media print {
+	.noPrint {
 		display: none;
 	}
-`
+}
 
-export const PlainText = styled.div`
+.plainText {
 	font-size: 14px;
-
-	@media print {
+}
+@media print {
+	.plainText {
 		font-size: 12px;
 	}
-`
+}
 
-export const DocumentWrapper = styled.div`
+.documentWrapper {
 	display: flex;
 	justify-content: center;
 	height: 100%;
 	width: 100vw;
 	background: var(--background);
-`
+}
 
-export const Document = styled.div`
+.document {
 	background-color: var(--contentBackground);
 	display: flex;
 	flex-direction: column;
@@ -40,18 +39,19 @@ export const Document = styled.div`
 	border-radius: 8px;
 	color: var(--content);
 	transition: var(--transition);
-
-	@media print {
+}
+@media print {
+	.document {
 		margin: unset;
 		border: none;
 		max-width: unset;
 		box-shadow: none;
 	}
-`
+}
 
-export const Title = styled.h1`
+.title {
 	text-align: center;
-	font-family: 'Bungee Inline', 'Open Sans';
+	font-family: var(--font-bungee), 'Open Sans';
 	font-weight: normal;
 	color: var(--title);
 	font-size: 42px;
@@ -59,110 +59,157 @@ export const Title = styled.h1`
 	margin-right: 0;
 	margin-left: 0;
 	margin-bottom: 0;
-
-	@media print {
+}
+@media print {
+	.title {
 		font-size: 36px;
 	}
-`
+}
 
-export const ContactContainer = styled.div`
+.contactContainer {
 	display: flex;
 	justify-content: space-around;
 	font-size: 14px;
 	font-weight: bold;
-
-	@media print {
+}
+@media print {
+	.contactContainer {
 		font-size: 12px;
 	}
-`
+}
 
-export const SectionHeader = styled.h2`
+.sectionHeader {
 	font-size: 20px;
 	text-transform: uppercase;
 	color: var(--sectionHeader);
 	margin: 0px;
-
-	@media print {
+}
+@media print {
+	.sectionHeader {
 		font-size: 16px;
 	}
-`
+}
 
-export const ColumnedLists = styled.div`
+.columnedLists {
 	display: flex;
 	flex-direction: row;
-
-	@media only screen and (max-width: 675px) {
+}
+@media only screen and (max-width: 675px) {
+	.columnedLists {
 		flex-direction: column;
 	}
-`
+}
 
-export const BulletedList = styled.ul`
+.bulletedList {
 	flex: 1;
 	margin: 0px;
 	padding-left: 24px;
 	font-size: 13px;
-
-	@media print {
+}
+@media print {
+	.bulletedList {
 		font-size: 11px;
 	}
-`
+}
 
-export const Stint = styled.div`
+.stint {
 	margin-top: 0px;
 	margin-bottom: 4px;
-`
+}
 
-export const Company = styled.h3`
+.company {
 	text-transform: uppercase;
 	font-size: 17px;
 	font-weight: normal;
 	margin: 0;
+}
 
-	@media print {
+@media print {
+	.company {
 		font-size: 14px;
 	}
-`
+}
 
-export const Position = styled.div`
+.position {
 	margin-left: 8px;
-`
+}
 
-export const PositionName = styled.h4`
+.positionName {
 	margin: 0;
 	display: inline-block;
 	margin-right: 8px;
 	color: var(--positionName);
+}
+.positionName::after {
+	content: ',';
+}
 
-	&::after {
-		content: ',';
-	}
-`
-
-export const PositionDate = styled.span`
+.positionDate {
 	font-style: italic;
 	font-size: 13px;
-`
+	font-weight: 200;
+}
 
-export const EducationStint = styled.div`
+.educationStint {
 	font-size: 13px;
 	margin-left: 8px;
-`
+}
 
-export const Accomplishment = styled.h3`
+.accomplishment {
 	text-transform: uppercase;
 	margin: 0;
 	font-size: 13px;
 	display: inline-block;
 	margin-right: 8px;
 	color: var(--positionName);
+}
 
-	// &::after {
-	// 	content: ',';
-	// }
-`
-
-export const TrainingDate = styled.span`
+.trainingDate {
 	display: inline-block;
 	font-style: italic;
 	font-size: 13px;
-`
+}
+
+/* Divider */
+.divider {
+	margin-left: -16px;
+	margin-right: -16px;
+}
+
+/* Action Bar */
+.actionBar {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	display: flex;
+	flex-direction: column;
+}
+.actionBar:hover {
+	cursor: pointer;
+}
+/* TODO - This is so hacky. Come up with a better mobile solution and stop being lazy 🤣️ */
+@media only screen and (max-width: 920px) {
+	.actionBar {
+		flex-direction: row;
+	}
+}
+@media only screen and (max-width: 675px) {
+	.actionBar {
+		display: none;
+	}
+}
+@media print {
+	.actionBar {
+		display: none;
+	}
+}
+
+.actionIcon {
+	font-size: 24px;
+	color: var(--themeIcons);
+	margin-right: 8px;
+	transition: var(--transition);
+}
+.actionIcon:hover {
+	color: var(--content);
+}

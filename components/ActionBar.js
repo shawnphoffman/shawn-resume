@@ -1,62 +1,17 @@
-import React, { useCallback } from 'react'
-import { styled } from 'linaria/react'
+'use client'
 
-import { useThemeContext } from 'context/ThemeContext'
-// import useDetectPrint from 'hooks/useDetectPrint'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 
-const Container = styled.header`
-	position: absolute;
-	top: 16px;
-	left: 16px;
-	display: flex;
-	flex-direction: column;
-
-	:hover {
-		cursor: pointer;
-	}
-
-	/* TODO - This is so hacky. Come up with a better mobile solution and stop being lazy 🤣️ */
-	@media only screen and (max-width: 920px) {
-		flex-direction: row;
-	}
-
-	@media only screen and (max-width: 675px) {
-		display: none;
-	}
-
-	@media print {
-		display: none;
-	}
-`
-
-const ThemeIcon = styled.div`
-	font-size: 24px;
-	color: var(--themeIcons);
-	margin-right: 8px;
-	transition: var(--transition);
-
-	:hover {
-		color: var(--content);
-	}
-`
+import styles from 'app/Global.module.css'
+import { useDeviceTheme } from 'hooks/useDeviceTheme'
 
 const ActionBar = () => {
-	const { setThemeOverride } = useThemeContext()
-	// Detect print command to load light theme
-	// const { setIsPrinting } = useDetectPrint()
+	const [themeOverride, setThemeOverride] = useState()
+	const deviceTheme = useDeviceTheme()
 
-	// NOTE - This function is HORRIBLE and not a good practice.
-	// Chrome locks up when you try to put window.print inside a timeout so I'm using a Promise to
-	// mimic the behavior. This is done because some browsers attempt to print before the print
-	// detection fires and adjusts the theme. window.print() was opening the print dialog without the
-	// CSS print media
-	// const handlePrint = React.useCallback(async () => {
-	// 	setIsPrinting(true)
-	// 	setThemeOverride('light')
-	// 	new Promise(resolve => {
-	// 		setTimeout(resolve, 0)
-	// 	}).then(() => window.print())
-	// }, [setIsPrinting, setThemeOverride])
+	const computedTheme = useMemo(() => {
+		return themeOverride ? themeOverride : deviceTheme
+	}, [deviceTheme, themeOverride])
 
 	const handleClick = useCallback(
 		theme => {
@@ -65,23 +20,28 @@ const ActionBar = () => {
 		[setThemeOverride]
 	)
 
+	useEffect(() => {
+		console.log('COMPUTED THEME: ', computedTheme)
+		document.body.className = computedTheme
+	}, [computedTheme])
+
 	return (
-		<Container>
-			<ThemeIcon title="Light Theme" onClick={() => handleClick('light')}>
-				<i className="fas fa-sun-cloud"></i>
+		<header className={styles.actionBar}>
+			<div className={styles.actionIcon} title="Light Theme" onClick={() => handleClick('theme-light')}>
 				{/* Light */}
-			</ThemeIcon>
-			<ThemeIcon title="Dark Theme" onClick={() => handleClick('dark')}>
-				<i className="fas fa-clouds-moon"></i>
+				<i className="fas fa-sun-cloud"></i>
+			</div>
+			<div className={styles.actionIcon} title="Dark Theme" onClick={() => handleClick('theme-dark')}>
 				{/* Dark */}
-			</ThemeIcon>
-			<ThemeIcon title="Hotdog Stand Theme" onClick={() => handleClick('hotdog')}>
-				<i className="fas fa-hotdog"></i>
+				<i className="fas fa-clouds-moon"></i>
+			</div>
+			<div className={styles.actionIcon} title="Hotdog Stand Theme" onClick={() => handleClick('theme-hotdog')}>
 				{/* Hotdog */}
-			</ThemeIcon>
+				<i className="fas fa-hotdog"></i>
+			</div>
 			<br />
 			{/* GitHub Link */}
-			{/* <ThemeIcon
+			{/* <div className={styles.actionIcon}
 				title="View Source on GitHub"
 				as="a"
 				href="https://github.com/shawnphoffman/resume"
@@ -89,12 +49,12 @@ const ActionBar = () => {
 				rel="noopener noreferrer"
 			>
 				<i className="fab fa-github"></i>
-			</ThemeIcon> */}
+			</div> */}
 			{/* Print */}
-			{/* <ThemeIcon title="Print" onClick={() => handlePrint()}>
+			{/* <div className={styles.actionIcon} title="Print" onClick={() => handlePrint()}>
 				<i className="fas fa-print"></i>
-			</ThemeIcon> */}
-		</Container>
+			</div> */}
+		</header>
 	)
 }
 

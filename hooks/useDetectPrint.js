@@ -1,6 +1,8 @@
+'use client'
+
 import { useEffect, useState } from 'react'
 
-function useDetectPrint() {
+const useDetectPrint = () => {
 	const [isPrinting, setIsPrinting] = useState(false)
 
 	useEffect(() => {

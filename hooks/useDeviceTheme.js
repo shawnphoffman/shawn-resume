@@ -1,18 +1,25 @@
+'use client'
+
 import { useCallback, useEffect, useRef, useState } from 'react'
 
 export const useDeviceTheme = () => {
 	const test = typeof window !== 'undefined'
 	const mediaQuery = useRef(test ? window?.matchMedia('(prefers-color-scheme: dark)') : null)
 
-	const [deviceTheme, setDeviceTheme] = useState('light')
+	const [deviceTheme, setDeviceTheme] = useState('theme-light')
 
-	const mediaListenerHandler = useCallback(matches => (matches ? setDeviceTheme('dark') : setDeviceTheme('light')), [setDeviceTheme])
+	const mediaListenerHandler = useCallback(
+		matches => {
+			return matches ? setDeviceTheme('theme-dark') : setDeviceTheme('theme-light')
+		},
+		[setDeviceTheme]
+	)
 
 	useEffect(() => {
 		if (mediaQuery.current?.matches) {
-			setDeviceTheme('dark')
+			setDeviceTheme('theme-dark')
 		} else {
-			setDeviceTheme('light')
+			setDeviceTheme('theme-light')
 		}
 	}, [])
 
