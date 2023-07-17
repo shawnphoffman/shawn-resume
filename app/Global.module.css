@@ -216,3 +216,9 @@
 .actionIcon:hover {
 	color: var(--content);
 }
+
+.contact {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
