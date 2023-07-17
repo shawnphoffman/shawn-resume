@@ -12,50 +12,17 @@ const ResumePage = () => {
 			<ActionBar />
 			<div className={styles.documentWrapper}>
 				<div className={styles.document}>
-					{/*  */}
 					{/* Title */}
 					<h1 className={styles.title}>Shawn Hoffman</h1>
-					{/*  */}
+
 					{/* Contact */}
 					<div className={styles.contactContainer}>
 						<Contact />
 					</div>
 					<Divider />
-					{/*  */}
-					{/* Focus / Objective */}
-					{/* <h2 className={styles.sectionHeader}>Focus</h2>
-					<PlainText>
-						Hard-working software development professional with specialized experience in front-end development, engineering management, and
-						emotional awareness supported by years of hands-on experience seeking a challenging and rewarding opportunity with a
-						forward-thinking and fast-paced company. With a diverse work history and a passion for new challenges, I can bring a unique
-						perspective and valuable experience to any project that I undertake.
-					</PlainText>
-					<Divider /> */}
-					{/*  */}
-					{/* Skills */}
-					{/* <h2 className={styles.sectionHeader}>Areas of Skill h2 Knowledge</div>
-					<div className={styles.columnedLists}>
-						<ul className={styles.bulletedList}>
-							<li>Highly effective interpersonal skills.</li>
-							<li>Diverse work experience that is relevant and applicable.</li>
-							<li>Detail and process-oriented with a focus on individuals.</li>
-						</ul>
-						<ul className={styles.bulletedList}>
-							<li>Capable of operating and adapting in constantly evolving and fast-paced business environments.</li>
-							<li>Creative, resourceful, and full of innovative ideas.</li>
-						</ul>
-					</div>
-					<Divider /> */}
-					{/*  */}
+
 					{/* Relevant Employment */}
 					<h2 className={styles.sectionHeader}>Relevant Employment</h2>
-					{/* Sabbatical */}
-					{/* <div className={styles.stint}>
-						<h3 className={styles.company}>Sabbatical</h3>
-						<div className={styles.position}>
-							<span className={styles.positionDate}>September 2022 - June 2023</span>
-						</div>
-					</div> */}
 					{/* Coinbase */}
 					<div className={styles.stint}>
 						<h3 className={styles.company}>Coinbase</h3>
@@ -161,7 +128,7 @@ const ResumePage = () => {
 						</div>
 					</div>
 					<Divider />
-					{/*  */}
+
 					{/* Technical Experience */}
 					<h2 className={styles.sectionHeader}>Buzzword Experience</h2>
 					<div className={styles.columnedLists}>
@@ -182,7 +149,7 @@ const ResumePage = () => {
 						</ul>
 					</div>
 					<Divider />
-					{/*  */}
+
 					{/* Education */}
 					<h2 className={styles.sectionHeader}>Education and Certifications</h2>
 					{/* Purdue */}
@@ -199,7 +166,6 @@ const ResumePage = () => {
 						<span className={styles.trainingDate}>September 2014</span>
 					</div>
 					<Divider />
-					{/*  */}
 
 					{/* Fun */}
 					<h2 className={styles.sectionHeader}>Fun Stuff</h2>
@@ -243,22 +209,8 @@ const ResumePage = () => {
 							</li>
 						</ul>
 					</div>
-					{/*  */}
-
-					{/* References */}
-					{/* <div className={styles.noPrint}>
-						<Divider />
-						<h2 className={styles.sectionHeader}>References</h2>
-						<PlainText>Reaching out to references is encouraged and can be provided upon request.</PlainText>
-						<ul className={styles.bulletedList}>
-							<li>
-								<a href="https://shawn.party/">Check out my personal website (https://shawn.party) for some of my other projects</a>
-							</li>
-						</ul>
-					</div> */}
 				</div>
 			</div>
-			{/* </ThemeProvider> */}
 		</>
 	)
 }
