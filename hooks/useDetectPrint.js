@@ -8,7 +8,6 @@ const useDetectPrint = () => {
 	useEffect(() => {
 		const printMq = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('print')
 		const mqEvent = mqList => {
-			console.log('change', !!mqList.matches)
 			setIsPrinting(!!mqList.matches)
 		}
 

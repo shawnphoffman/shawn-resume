@@ -21,7 +21,6 @@ const ActionBar = () => {
 	)
 
 	useEffect(() => {
-		console.log('COMPUTED THEME: ', computedTheme)
 		document.body.className = computedTheme
 	}, [computedTheme])
 
