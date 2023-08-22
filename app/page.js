@@ -129,25 +129,77 @@ const ResumePage = () => {
 					</div>
 					<Divider />
 
-					{/* Technical Experience */}
-					<h2 className={styles.sectionHeader}>Buzzword Experience</h2>
-					<div className={styles.columnedLists}>
+					{/* Fun */}
+					<h2 className={styles.sectionHeader}>Sabbatical</h2>
+					<div className={styles.position}>
+						<span className={styles.positionDate}>October 2022 - September 2023</span>
 						<ul className={styles.bulletedList}>
-							<li>JavaScript / TypeScript / React / NextJS</li>
-							<li>Webpack / Jest / Enzyme / Storybook</li>
-							<li>C# / .NET Core / .NET Standard / MVC</li>
-						</ul>
-						<ul className={styles.bulletedList}>
-							<li>Postgres / MSSQL / PL-SQL / MySQL</li>
-							<li>AWS / S3 / CloudFront / Azure / nginx</li>
-							<li>REST / JWT / OAUTH / SOAP / Postman</li>
-						</ul>
-						<ul className={styles.bulletedList}>
-							<li>Node / Electron / Docker / Kubernetes</li>
-							<li>ElasticSearch / Kibana / Logstash</li>
-							<li>Git / TFVC / GitHub / TFS / ClearCase</li>
+							<li>Took a 4-week road trip across the country; visiting National Parks, family, friends, and amazing food.</li>
+							<li>
+								Focused a lot of my time as a 2023 PCT Trail Angel, supporting hikers with food, lodging, and &quot;trail magic&quot;.
+							</li>
+							<li>
+								Created free NextJS websites for some friend&apos;s podcasts (
+								<a target="_blank" href="https://blueharvest.rocks" rel="noreferrer">
+									Blue Harvest
+								</a>{' '}
+								&amp;{' '}
+								<a target="_blank" href="https://jammedtransmissions.com" rel="noreferrer">
+									Jammed Transmissions
+								</a>{' '}
+								&amp;{' '}
+								<a target="_blank" href="https://myweirdfoot.com" rel="noreferrer">
+									High Potion
+								</a>
+								).
+							</li>
+							<li>
+								Built a{' '}
+								<a href="https://swc.events/" rel="noreferrer" target="_blank">
+									Star Wars Celebration companion website
+								</a>
+								, making it easier to plan your trip with official and unofficial events.
+							</li>
+							<li>
+								Deployed a{' '}
+								<a href="https://bsky.app/profile/did:plc:q7ul4lz2j3d6qtcjzvz4rrjh/feed/shawnbot-pods" rel="noreferrer" target="_blank">
+									custom BlueSky feed
+								</a>
+								, promoting some of my favorite Star Wars and gaming content creators.
+							</li>
+							<li>
+								Put together a{' '}
+								<a target="_blank" href="https://obs.shawn.party/" rel="noreferrer">
+									handful of free web-based text helpers
+								</a>{' '}
+								for small-scale streamers to use in OBS.
+							</li>
+							<li>
+								Created a{' '}
+								<a rel="noreferrer" href="https://github.com/shawnphoffman/ae-photo-slideshow" target="_blank">
+									set of custom Adobe After Effects plugins
+								</a>{' '}
+								that allow you to use photo GPS data to fetch the city and state, add it and the date to a composition as a text layer, and
+								batch process everything (with transitions) to an output composition. This was used to create multiple 600+ photo slideshows
+								for PCT hikers.
+							</li>
+							<li>
+								Refactored{' '}
+								<a target="_blank" href="https://blog.shawn.party/" rel="noreferrer">
+									my blog
+								</a>{' '}
+								to make it easier to document and share my never-ending side projects.
+							</li>
+							<li>Contributed to open-source projects like AudiobookShelf, Flexget, etc.</li>
+							<li>Started live-streaming model-building and video games on Twitch, reaching Affiliate within 2 months.</li>
+							<li>Developed nonsensical Twitch and Discord bots for some friends podcast and live-stream community.</li>
+							<li>
+								Custom-built my own stickless arcade fighting control out of laser-cut acrylic and off-the-shelf components. It is pretty
+								cool and I look forward to challenging everyone in Street Fighter 6.
+							</li>
 						</ul>
 					</div>
+
 					<Divider />
 
 					{/* Education */}
@@ -167,46 +219,23 @@ const ResumePage = () => {
 					</div>
 					<Divider />
 
-					{/* Fun */}
-					<h2 className={styles.sectionHeader}>Fun Stuff</h2>
-					<div className={styles.position}>
-						<h4 className={styles.positionName}>Sabbatical</h4>
-						<span className={styles.positionDate}>October 2022 - July 2023</span>
+					{/* Technical Experience */}
+					<h2 className={styles.sectionHeader}>Buzzword Experience</h2>
+					<div className={styles.columnedLists}>
 						<ul className={styles.bulletedList}>
-							<li>Took a 4-week road trip across the country; visiting National Parks, family, friends, and amazing food.</li>
-							<li>
-								Focused a lot of my time as a 2023 PCT Trail Angel, supporting hikers with food, lodging, and &quot;trail magic&quot;.
-							</li>
-							<li>
-								Created free LinkTree-alternative NextJS websites for some friend&apos;s podcasts (
-								<a target="_blank" href="https://blueharvest.rocks" rel="noreferrer">
-									Blue Harvest
-								</a>{' '}
-								&amp;{' '}
-								<a target="_blank" href="https://jammedtransmissions.com" rel="noreferrer">
-									Jammed Transmissions
-								</a>
-								).
-							</li>
-							<li>Started streaming games and model-building on Twitch, reaching Affiliate within 2 months.</li>
-							<li>
-								Built Star Wars Celebration companion website, making it easier to plan your trip with official and unofficial events.
-							</li>
-							<li>Developed nonsensical Twitch and Discord bots for some friends podcast and live-stream community.</li>
-							<li>
-								Put together a{' '}
-								<a target="_blank" href="https://obs.shawn.party/" rel="noreferrer">
-									handful of free web-based text helpers
-								</a>{' '}
-								for small-scale streamers to use in OBS.
-							</li>
-							<li>
-								Refactored{' '}
-								<a target="_blank" href="https://blog.shawn.party/" rel="noreferrer">
-									my blog
-								</a>{' '}
-								to make it easier to document and share my never-ending side projects.
-							</li>
+							<li>JavaScript / TypeScript / React / NextJS</li>
+							<li>Webpack / Jest / Enzyme / Storybook</li>
+							<li>C# / .NET Core / .NET Standard / MVC</li>
+						</ul>
+						<ul className={styles.bulletedList}>
+							<li>Postgres / MSSQL / PL-SQL / MySQL</li>
+							<li>AWS / S3 / CloudFront / Azure / nginx</li>
+							<li>REST / JWT / OAUTH / SOAP / Postman</li>
+						</ul>
+						<ul className={styles.bulletedList}>
+							<li>Node / Electron / Docker / Kubernetes</li>
+							<li>ElasticSearch / Kibana / Logstash</li>
+							<li>Git / TFVC / GitHub / TFS / ClearCase</li>
 						</ul>
 					</div>
 				</div>
