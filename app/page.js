@@ -23,6 +23,14 @@ const ResumePage = () => {
 
 					{/* Relevant Employment */}
 					<h2 className={styles.sectionHeader}>Relevant Employment</h2>
+					{/* SnowOwl */}
+					<div className={styles.stint}>
+						<h3 className={styles.company}>Snow Owl</h3>
+						<div className={styles.position}>
+							<h4 className={styles.positionName}>Software Engineer</h4>
+							<span className={styles.positionDate}>September 2023 - Current</span>
+						</div>
+					</div>
 					{/* Coinbase */}
 					<div className={styles.stint}>
 						<h3 className={styles.company}>Coinbase</h3>
