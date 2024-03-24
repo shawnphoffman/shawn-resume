@@ -1,6 +1,7 @@
 import 'styles/sanitize.css'
 import 'styles/globals.css'
 
+import { Analytics } from '@vercel/analytics/react'
 import Script from 'next/script'
 
 import { bungeeInline, openSans } from 'app/fonts'
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
 			</head>
 			<body className="theme-dark">
 				<div>{children}</div>
+				<Analytics />
 			</body>
 		</html>
 	)
