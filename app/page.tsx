@@ -161,7 +161,7 @@ const ResumePage = () => {
 					<Divider />
 
 					{/* Technical Experience */}
-					<h2 className={styles.sectionHeader}>Buzzword Experience</h2>
+					<h2 className={styles.sectionHeader}>Buzzwords</h2>
 					<div className={styles.columnedLists}>
 						<ul className={styles.bulletedList}>
 							<li>JavaScript / TypeScript / React / NextJS</li>

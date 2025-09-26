@@ -6,7 +6,7 @@ import styles from 'app/Global.module.css'
 import useDetectPrint from 'hooks/useDetectPrint'
 
 const Contact = () => {
-	const { isPrinting } = useDetectPrint()
+	const isPrinting = useDetectPrint()
 
 	if (!isPrinting) return null
 	return (
