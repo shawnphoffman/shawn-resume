@@ -2,14 +2,16 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 
-export const useDeviceTheme = () => {
-	const test = typeof window !== 'undefined'
-	const mediaQuery = useRef(test ? window?.matchMedia('(prefers-color-scheme: dark)') : null)
+type ThemeType = 'theme-light' | 'theme-dark'
 
-	const [deviceTheme, setDeviceTheme] = useState('theme-light')
+export const useDeviceTheme = (): ThemeType => {
+	const test = typeof window !== 'undefined'
+	const mediaQuery = useRef<MediaQueryList | null>(test ? window?.matchMedia('(prefers-color-scheme: dark)') : null)
+
+	const [deviceTheme, setDeviceTheme] = useState<ThemeType>('theme-light')
 
 	const mediaListenerHandler = useCallback(
-		matches => {
+		(matches: boolean) => {
 			return matches ? setDeviceTheme('theme-dark') : setDeviceTheme('theme-light')
 		},
 		[setDeviceTheme]
@@ -24,7 +26,7 @@ export const useDeviceTheme = () => {
 	}, [])
 
 	useEffect(() => {
-		const listener = ({ matches }) => mediaListenerHandler(matches)
+		const listener = ({ matches }: MediaQueryListEvent) => mediaListenerHandler(matches)
 
 		const currentMediaQuery = mediaQuery.current
 		currentMediaQuery?.addEventListener('change', listener)

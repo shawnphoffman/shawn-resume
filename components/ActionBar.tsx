@@ -5,8 +5,10 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import styles from 'app/Global.module.css'
 import { useDeviceTheme } from 'hooks/useDeviceTheme'
 
+type ThemeType = 'theme-light' | 'theme-dark' | 'theme-hotdog' | 'theme-contrast'
+
 const ActionBar = () => {
-	const [themeOverride, setThemeOverride] = useState()
+	const [themeOverride, setThemeOverride] = useState<ThemeType | undefined>()
 	const deviceTheme = useDeviceTheme()
 
 	const computedTheme = useMemo(() => {
@@ -14,7 +16,7 @@ const ActionBar = () => {
 	}, [deviceTheme, themeOverride])
 
 	const handleClick = useCallback(
-		theme => {
+		(theme: ThemeType) => {
 			setThemeOverride(theme)
 		},
 		[setThemeOverride]

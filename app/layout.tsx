@@ -19,11 +19,15 @@ export const metadata = {
 	},
 }
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+	children: React.ReactNode
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang="en" className={`${openSans.className} ${bungeeInline.variable}`}>
 			<head>
-				<Script src="https://kit.fontawesome.com/94ef14ccff.js" strategy="afterInteractive" rel="preload" as="font" />
+				<Script src="https://kit.fontawesome.com/94ef14ccff.js" strategy="afterInteractive" />
 			</head>
 			<body className="theme-dark">
 				<div>{children}</div>

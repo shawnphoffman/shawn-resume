@@ -2,7 +2,12 @@
 
 import { memo, useEffect } from 'react'
 
-const Error = ({ error, reset }) => {
+interface ErrorProps {
+	error: Error & { digest?: string }
+	reset: () => void
+}
+
+const Error = ({ error, reset }: ErrorProps) => {
 	useEffect(() => {
 		console.error(error)
 	}, [error])
