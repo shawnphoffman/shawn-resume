@@ -45,7 +45,9 @@ export default function Employment() {
 					<h4 className={styles.positionName}>Manager of Front-End Engineering</h4>
 					<span className={styles.positionDate}>May 2017 - July 2019</span>
 					<ul className={styles.bulletedList}>
-						<li>Encouraged and grew team of engineers that maintained all front-end web applications and the platform's public API.</li>
+						<li>
+							Encouraged and grew team of engineers that maintained all front-end web applications and the platform&apos;s public API.
+						</li>
 						<li>Championed and led major modernization project converting the member-facing site from .NET MVC &amp; Knockout to React.</li>
 						<li>Created a desktop application and build tool in an effort to drive end user engagement and combat legacy browser usage.</li>
 						<li>Applied best practices and an empathetic approach when creating a swim lane process that helped engineering scale.</li>
@@ -59,7 +61,10 @@ export default function Employment() {
 					<span className={styles.positionDate}>July 2015 - May 2017</span>
 					<ul className={styles.bulletedList}>
 						<li>Standardized public API development and created the user interface and tooling for generated API documentation.</li>
-						<li>Founded the internal "Culture Committee", focused on promoting positive company culture and inclusion across offices.</li>
+						<li>
+							Founded the internal &quot;Culture Committee&quot;, focused on promoting positive company culture and inclusion across
+							offices.
+						</li>
 					</ul>
 				</div>
 			</div>
