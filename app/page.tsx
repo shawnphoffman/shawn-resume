@@ -42,10 +42,10 @@ const ResumePage = () => {
 					{/* Technical Experience */}
 					<Buzzwords />
 
-					<Divider />
+					{/* <Divider /> */}
 
 					{/* Hobbies */}
-					<Hobbies />
+					{/* <Hobbies /> */}
 				</div>
 			</div>
 		</>

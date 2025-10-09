@@ -1,7 +1,6 @@
 import 'styles/globals.css'
 
 import { Analytics } from '@vercel/analytics/react'
-import Script from 'next/script'
 
 import { bungeeInline, openSans } from 'app/fonts'
 
@@ -25,9 +24,6 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
 	return (
 		<html lang="en" className={`${openSans.className} ${bungeeInline.variable}`}>
-			<head>
-				<Script src="https://kit.fontawesome.com/94ef14ccff.js" strategy="afterInteractive" />
-			</head>
 			<body className="theme-dark">
 				<div>{children}</div>
 				<Analytics />

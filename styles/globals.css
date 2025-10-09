@@ -11,19 +11,11 @@
 	--positionName: oklch(35.9% 0.144 278.697);
 	--themeIcons: oklch(70.5% 0.015 286.067 / 0.5);
 	--dividerFill: transparent;
+
+	--pill: var(--content);
+	--pillBorder: oklch(44.2% 0.017 285.786);
+	--pillBackground: var(--background);
 }
-/* .theme-dark {
-	--background: #18191a;
-	--contentBackground: #242526;
-	--boxShadow: #0003;
-	--content: #fff;
-	--divider: #555;
-	--title: #706fd3;
-	--sectionHeader: #34ace0;
-	--positionName: #33d9b2;
-	--themeIcons: #fff3;
-	--dividerFill: transparent;
-} */
 .theme-dark {
 	/* zinc-950 */
 	--background: oklch(14.1% 0.005 285.823);
@@ -43,6 +35,12 @@
 	--positionName: oklch(77.7% 0.152 181.912);
 	/* zinc-400 */
 	--themeIcons: oklch(70.5% 0.015 286.067 / 0.3);
+	/* teal-200 */
+
+	--pill: oklch(70.5% 0.015 286.067);
+	--pillBorder: oklch(44.2% 0.017 285.786);
+	--pillBackground: var(--background);
+
 	--dividerFill: transparent;
 }
 .theme-hotdog {
@@ -56,6 +54,10 @@
 	--positionName: #f00;
 	--themeIcons: #ff0c;
 	--dividerFill: transparent;
+
+	--pill: var(--content);
+	--pillBorder: oklch(44.2% 0.017 285.786);
+	/* --pillBackground: var(--background); */
 }
 .theme-contrast {
 	--background: #fff;
@@ -68,6 +70,11 @@
 	--positionName: #30336b;
 	--themeIcons: #30336b;
 	--dividerFill: #000;
+
+	--pill: var(--content);
+	--pillBorder: var(--positionName);
+	--pillBackground: var(--background);
+	--pillBorderWidth: 1.5px;
 }
 @media print {
 	[class^='theme-'] {
@@ -86,6 +93,10 @@
 		--positionName: oklch(35.9% 0.144 278.697);
 		--themeIcons: oklch(70.5% 0.015 286.067 / 0.5);
 		--dividerFill: transparent;
+
+		--pill: var(--content);
+		--pillBorder: oklch(44.2% 0.017 285.786);
+		--pillBackground: var(--background);
 	}
 }
 

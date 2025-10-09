@@ -1,3 +1,4 @@
+import Pills from '@/components/Pills'
 import styles from 'app/Global.module.css'
 
 export default function Employment() {
@@ -6,7 +7,10 @@ export default function Employment() {
 			<h2 className={styles.sectionHeader}>Relevant Employment</h2>
 			{/* SnowOwl */}
 			<div className={styles.stint}>
-				<h3 className={styles.company}>Snow Owl</h3>
+				<div className={styles.companyContainer}>
+					<h3 className={styles.company}>Snow Owl</h3>
+					<Pills pills={['Svelte', 'AI', 'Framer']} />
+				</div>
 				<div className={styles.position}>
 					<h4 className={styles.positionName}>Software Engineer</h4>
 					<span className={styles.positionDate}>September 2023 - Current</span>
@@ -14,7 +18,11 @@ export default function Employment() {
 			</div>
 			{/* Coinbase */}
 			<div className={styles.stint}>
-				<h3 className={styles.company}>Coinbase</h3>
+				<div className={styles.companyContainer}>
+					<h3 className={styles.company}>Coinbase</h3>
+
+					<Pills pills={['React', 'TypeScript', 'React Native']} />
+				</div>
 				<div className={styles.position}>
 					<h4 className={styles.positionName}>Senior Software Engineer</h4>
 					<span className={styles.positionDate}>October 2020 - September 2022</span>
@@ -23,8 +31,8 @@ export default function Employment() {
 							Led the front-end decomposition of Coinbase-wide login from Rails monolith to React application (
 							<a href="https://login.coinbase.com">login.coinbase.com</a>).
 						</li>
-						<li>Converted mobile app native login to web-based login experience; reduced future duplicated and deployment times.</li>
-						<li>Added registration and profile support for decentralized identity ENS names through Wallet browser extension.</li>
+						<li>Converted mobile app native login to web-based login experience; reducing duplication and deployment times.</li>
+						<li>Added registration and profile support for decentralized identity ENS names through Coinbase Wallet extension.</li>
 						<li>Mentored incoming software engineers on best practices, code quality, career coaching, and criteria for advancement.</li>
 						<li>Worked extensively decomposing frontend out of legacy Rails monolith into their own modern applications.</li>
 					</ul>
@@ -32,7 +40,10 @@ export default function Employment() {
 			</div>
 			{/* DySi */}
 			<div className={styles.stint}>
-				<h3 className={styles.company}>Dynamic Signal</h3>
+				<div className={styles.companyContainer}>
+					<h3 className={styles.company}>Dynamic Signal</h3>
+					<Pills pills={['React', 'JavaScript', 'Management']} />
+				</div>
 				<div className={styles.position}>
 					<h4 className={styles.positionName}>Staff Software Engineer</h4>
 					<span className={styles.positionDate}>July 2019 - June 2020</span>
@@ -70,11 +81,14 @@ export default function Employment() {
 			</div>
 			{/* ADESA */}
 			<div className={styles.stint}>
-				<h3 className={styles.company}>ADESA / AutoVIN</h3>
+				<div className={styles.companyContainer}>
+					<h3 className={styles.company}>ADESA / AutoVIN</h3>
+
+					<Pills pills={['.NET', 'JavaScript', 'CSS']} />
+				</div>
 				<div className={styles.position}>
 					<h4 className={styles.positionName}>Developer Consultant and Scrum Master</h4>
 					<span className={styles.positionDate}>August 2012 - June 2015</span>
-
 					<div className={styles.noPrint}>
 						<ul className={styles.bulletedList}>
 							<li>

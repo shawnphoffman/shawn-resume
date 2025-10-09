@@ -3,8 +3,10 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"@awesome.me/kit-94ef14ccff": "^1.0.34",
+		"@fortawesome/fontawesome-svg-core": "^7.1.0",
+		"@fortawesome/react-fontawesome": "^3.1.0",
 		"@vercel/analytics": "^1.5.0",
-		"eslint-plugin-react-you-might-not-need-an-effect": "^0.5.6",
 		"next": "^15.5.4",
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0"
@@ -34,6 +36,7 @@
 		"@types/react-dom": "^19.2.1",
 		"eslint": "^9.37.0",
 		"eslint-config-next": "^15.5.4",
+		"eslint-plugin-react-you-might-not-need-an-effect": "^0.5.6",
 		"typescript": "^5.9.3"
 	}
 }

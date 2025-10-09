@@ -5,7 +5,7 @@ export default function Independent() {
 		<>
 			<h2 className={styles.sectionHeader}>Independent Projects</h2>
 			{/* <div className={styles.stint}>
-				<h3 className={styles.company}>Passion Projects</h3>
+				<h3 className={styles.company}>Wish Lists / HoffStuff</h3>
 				<div className={styles.position}>
 					<ul className={styles.bulletedList}>
 						<li>xxxx</li>
@@ -21,6 +21,16 @@ export default function Independent() {
 				<div className={styles.position}>
 					<span className={styles.positionDate}>October 2022 - September 2023</span>
 					<ul className={styles.bulletedList}>
+						<li>
+							<a href="https://2024.madison.rocks/" rel="noreferrer" target="_blank">
+								Eras Tour Themed News Years Letter
+							</a>
+						</li>
+						<li>
+							<a href="https://madison.rocks/" rel="noreferrer" target="_blank">
+								PCT Hike Tracker
+							</a>
+						</li>
 						<li>Took a 4-week road trip across the country; visiting National Parks, family, friends, and amazing food.</li>
 						<li>Focused a lot of my time as a 2023 PCT Trail Angel, supporting hikers with food, lodging, and &quot;trail magic&quot;.</li>
 						<li>
@@ -47,7 +57,7 @@ export default function Independent() {
 						</li>
 						<li>
 							Deployed a{' '}
-							<a href="https://bsky.app/profile/did:plc:q7ul4lz2j3d6qtcjzvz4rrjh/feed/shawnbot-pods" rel="noreferrer" target="_blank">
+							<a href="https://bsky.app/profile/dev.shawn.party/feed/star-wars" rel="noreferrer" target="_blank">
 								custom BlueSky feed
 							</a>
 							, promoting some of my favorite Star Wars and gaming content creators.

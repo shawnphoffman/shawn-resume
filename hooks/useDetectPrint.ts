@@ -19,10 +19,6 @@ function useDetectPrint() {
 	const blurTimerRef = useRef<number | null>(null)
 
 	useEffect(() => {
-		console.log('isPrinting', isPrinting)
-	}, [isPrinting])
-
-	useEffect(() => {
 		mountedRef.current = true
 		return () => {
 			mountedRef.current = false
