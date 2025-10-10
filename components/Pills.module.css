@@ -1,0 +1,35 @@
+.pills {
+	display: flex;
+	flex-direction: row;
+	gap: 6px;
+	font-size: 10px;
+
+	justify-content: flex-end;
+	align-self: center;
+	flex: 1;
+}
+
+.pill {
+	font-family: monospace;
+	line-height: 1.1;
+	text-transform: uppercase;
+	padding: 2px 6px 1px 6px;
+	border-radius: 9999px;
+	color: var(--pill);
+	background: var(--pillBackground);
+	border: var(--pillBorderWidth, 1px) solid var(--pillBorder);
+	transition: var(--transition);
+}
+
+@media print {
+	.pills,
+	.pill {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 675px) {
+	.pills {
+		display: none;
+	}
+}

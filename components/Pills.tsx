@@ -1,4 +1,4 @@
-import styles from 'app/Global.module.css'
+import styles from './Pills.module.css'
 
 function Pills({ pills }: { pills: string[] }) {
 	return (

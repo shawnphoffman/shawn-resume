@@ -1,0 +1,57 @@
+.actionBar {
+	position: fixed;
+	top: 16px;
+	left: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	font-size: 28px;
+}
+.actionBar:hover {
+	cursor: pointer;
+}
+
+.linkBar {
+	position: fixed;
+	bottom: 16px;
+	left: 16px;
+	display: flex;
+	flex-direction: column;
+	font-size: 28px;
+}
+.linkBar:hover {
+	cursor: pointer;
+}
+
+/* TODO - This is so hacky. Come up with a better mobile solution and stop being lazy 🤣️ */
+@media only screen and (max-width: 920px) {
+	.actionBar {
+		flex-direction: row;
+		font-size: 22px;
+	}
+}
+@media only screen and (max-width: 675px) {
+	.actionBar {
+		display: none;
+	}
+}
+
+.actionIcon {
+	color: var(--themeIcons);
+	transition: var(--transition);
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	font: inherit;
+}
+.actionIcon:hover {
+	color: var(--content);
+}
+
+@media print {
+	.actionBar,
+	.linkBar {
+		display: none;
+	}
+}

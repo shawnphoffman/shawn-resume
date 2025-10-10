@@ -1,0 +1,13 @@
+.companyIcon {
+	width: 18px;
+	height: fit-content;
+	aspect-ratio: 1/1;
+	object-fit: contain;
+	border-radius: 4px;
+}
+
+@media print {
+	.companyIcon {
+		display: none;
+	}
+}

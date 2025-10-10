@@ -101,7 +101,7 @@
 }
 
 [class^='theme-'] {
-	--transition: all 0.25s linear;
+	--transition: all 0.25s linear, transform 0.1s ease-in-out;
 }
 
 *,
@@ -135,4 +135,23 @@ a {
 	text-underline-offset: 2px;
 	text-decoration-thickness: from-font;
 	text-decoration-color: var(--sectionHeader);
+	transition: var(--transition);
+	display: inline-block;
+}
+a:hover {
+	color: var(--content);
+}
+
+button {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	font: inherit;
+	color: var(--content);
+	transition: var(--transition);
+}
+button:hover {
+	color: var(--content);
+	transform: scale(1.1);
 }

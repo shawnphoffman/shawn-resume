@@ -1,0 +1,14 @@
+.photoIcon {
+	color: var(--positionName);
+	align-self: flex-end;
+}
+
+.photoIcon:hover {
+	transform: scale(1.15);
+}
+
+@media print {
+	.photoIcon {
+		display: none;
+	}
+}

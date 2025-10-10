@@ -1,5 +1,8 @@
 import Pills from '@/components/Pills'
+import { faArrowUpRightFromSquare } from '@awesome.me/kit-94ef14ccff/icons/classic/solid'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from 'app/Global.module.css'
+import Link from 'next/link'
 
 export default function Employment() {
 	return (
@@ -28,13 +31,15 @@ export default function Employment() {
 					<span className={styles.positionDate}>October 2020 - September 2022</span>
 					<ul className={styles.bulletedList}>
 						<li>
-							Led the front-end decomposition of Coinbase-wide login from Rails monolith to React application (
-							<a href="https://login.coinbase.com">login.coinbase.com</a>).
+							Led the front-end decomposition of Coinbase-wide login from Rails monolith to React application.
+							<Link href="https://login.coinbase.com" target="_blank" aria-label="View Coinbase Login">
+								<FontAwesomeIcon size="sm" icon={faArrowUpRightFromSquare} />
+							</Link>
 						</li>
 						<li>Converted mobile app native login to web-based login experience; reducing duplication and deployment times.</li>
 						<li>Added registration and profile support for decentralized identity ENS names through Coinbase Wallet extension.</li>
 						<li>Mentored incoming software engineers on best practices, code quality, career coaching, and criteria for advancement.</li>
-						<li>Worked extensively decomposing frontend out of legacy Rails monolith into their own modern applications.</li>
+						<li>Worked extensively to decompose frontends out of legacy Rails monolith into their own modern applications.</li>
 					</ul>
 				</div>
 			</div>

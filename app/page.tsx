@@ -6,7 +6,7 @@ import Divider from 'components/Divider'
 
 import styles from './Global.module.css'
 import Independent from './sections/independent'
-import Hobbies from './sections/hobbies'
+// import Hobbies from './sections/hobbies'
 import Employment from './sections/employment'
 import Education from './sections/education'
 import Buzzwords from './sections/buzzwords'

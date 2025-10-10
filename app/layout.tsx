@@ -1,4 +1,6 @@
 import 'styles/globals.css'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import 'yet-another-react-lightbox/styles.css'
 
 import { Analytics } from '@vercel/analytics/react'
 

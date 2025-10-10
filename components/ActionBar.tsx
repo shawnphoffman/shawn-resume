@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 
-import styles from 'app/Global.module.css'
+import styles from './ActionBar.module.css'
 import { useDeviceTheme } from 'hooks/useDeviceTheme'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
