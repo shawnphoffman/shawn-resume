@@ -88,7 +88,6 @@ export default function Employment() {
 			<div className={styles.stint}>
 				<div className={styles.companyContainer}>
 					<h3 className={styles.company}>ADESA / AutoVIN</h3>
-
 					<Pills pills={['.NET', 'JavaScript', 'CSS']} />
 				</div>
 				<div className={styles.position}>

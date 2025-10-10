@@ -20,7 +20,7 @@ export default function Independent() {
 		<>
 			<h2 className={styles.sectionHeader}>Independent Projects</h2>
 			{/* HoffStuff */}
-			<div className={styles.stint}>
+			<div className={`${styles.stint} ${styles.noBreak}`}>
 				<div className={styles.companyContainer}>
 					<CompanyIcon image={hoffstuffIcon} alt="Wish Lists / HoffStuff" />
 					<h3 className={styles.company}>
@@ -39,7 +39,7 @@ export default function Independent() {
 				</div>
 			</div>
 			{/* BlueSky */}
-			<div className={styles.stint}>
+			<div className={`${styles.stint} ${styles.noBreak}`}>
 				<div className={styles.companyContainer}>
 					<CompanyIcon image={blueskyIcon} alt="Bluesky Projects" />
 					<h3 className={styles.company}>Bluesky Projects</h3>
@@ -68,8 +68,8 @@ export default function Independent() {
 					</ul>
 				</div>
 			</div>
-			{/* BlueSky */}
-			<div className={styles.stint}>
+			{/* Gaming */}
+			<div className={`${styles.stint} ${styles.noPrint}`}>
 				<div className={styles.companyContainer}>
 					<CompanyIcon image={gamingIcon} alt="Video Game Companions" />
 					<h3 className={styles.company}>Video Game Companions</h3>
@@ -93,8 +93,8 @@ export default function Independent() {
 					</ul>
 				</div>
 			</div>
-			{/* BlueSky */}
-			<div className={styles.stint}>
+			{/* Misc */}
+			<div className={`${styles.stint} ${styles.noPrint}`}>
 				<div className={styles.companyContainer}>
 					<CompanyIcon image={miscIcon} alt="Misc Projects" />
 					<h3 className={styles.company}>Misc Projects</h3>
@@ -151,6 +151,12 @@ export default function Independent() {
 							: Allows you to use photo GPS data to fetch the city and state, add it and the date to a composition as a text layer, and
 							batch process everything (with transitions) to an output composition. This was used to create multiple 600+ photo slideshows
 							for long-distance hikers.
+						</li>
+						<li>
+							<Link target="_blank" href="https://goober.house/">
+								Tahoe Air Quality
+							</Link>
+							: Dead simple air quality indicator using data from a local air quality station.
 						</li>
 						{/* <li>
 							<Link target="_blank" href="https://obs.shawn.party/">

@@ -141,6 +141,11 @@ a {
 a:hover {
 	color: var(--content);
 }
+@media print {
+	a {
+		text-decoration: none;
+	}
+}
 
 .theme-contrast a {
 	color: var(--title);
