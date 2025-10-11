@@ -6,7 +6,7 @@ import Divider from 'components/Divider'
 
 import styles from './Global.module.css'
 import Independent from './sections/independent'
-// import Hobbies from './sections/hobbies'
+import Hobbies from './sections/hobbies'
 import Employment from './sections/employment'
 import Education from './sections/education'
 import Buzzwords from './sections/buzzwords'
@@ -25,27 +25,15 @@ const ResumePage = () => {
 						<Contact />
 					</div>
 					<Divider />
-
-					{/* Relevant Employment */}
 					<Employment />
 					<Divider />
-
-					{/* Fun */}
 					<Independent />
-
 					<Divider />
-
-					{/* Education */}
 					<Education />
 					<Divider />
-
-					{/* Technical Experience */}
 					<Buzzwords />
-
-					{/* <Divider /> */}
-
-					{/* Hobbies */}
-					{/* <Hobbies /> */}
+					<Divider />
+					<Hobbies />
 				</div>
 			</div>
 		</>
