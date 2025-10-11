@@ -1,8 +1,6 @@
-import { memo } from 'react'
-
 import styles from 'app/Global.module.css'
 
-const Divider = () => {
+function Divider() {
 	return (
 		<div className={styles.divider} role="separator">
 			<svg width="100%" height="10" role="presentation">
@@ -14,4 +12,4 @@ const Divider = () => {
 	)
 }
 
-export default memo(Divider)
+export default Divider
