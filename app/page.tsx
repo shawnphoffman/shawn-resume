@@ -32,8 +32,10 @@ const ResumePage = () => {
 					<Education />
 					<Divider />
 					<Buzzwords />
-					<Divider />
-					<Hobbies />
+					<div className={styles.noPrint}>
+						<Divider />
+						<Hobbies />
+					</div>
 				</div>
 			</div>
 		</>

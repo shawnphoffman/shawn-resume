@@ -9,6 +9,7 @@ import hoffstuff1 from '@/images/hoffstuff-1.png'
 import hoffstuff2 from '@/images/hoffstuff-2.png'
 import hoffstuff3 from '@/images/hoffstuff-3.png'
 import hoffstuff4 from '@/images/hoffstuff-4.png'
+import trashLight from '@/images/trash-light-1.jpg'
 import Pills from '@/components/Pills'
 import Link from 'next/link'
 import CompanyIcon from '@/components/CompanyIcon'
@@ -39,7 +40,7 @@ export default function Independent() {
 				</div>
 			</div>
 			{/* BlueSky */}
-			<div className={`${styles.stint} ${styles.noBreak}`}>
+			<div className={`${styles.stint} ${styles.noPrint}`}>
 				<div className={styles.companyContainer}>
 					<CompanyIcon image={blueskyIcon} alt="Bluesky Projects" />
 					<h3 className={styles.company}>Bluesky Projects</h3>
@@ -156,7 +157,12 @@ export default function Independent() {
 							<Link target="_blank" href="https://goober.house/">
 								Tahoe Air Quality
 							</Link>
-							: Dead simple air quality indicator using data from a local air quality station.
+							: Dead simple air quality indicator using data from a local air quality station and local APIs.
+						</li>
+						<li>
+							Home Automations: The most popular being an outdoor light thats color helps you know what the next trash pickup is, powered by
+							Home Assistant and a custom integration with the waste management website. Blue indicates that it is a recycling week and
+							green is for yard waste. <PhotoBox images={[trashLight]} />
 						</li>
 						{/* <li>
 							<Link target="_blank" href="https://obs.shawn.party/">
