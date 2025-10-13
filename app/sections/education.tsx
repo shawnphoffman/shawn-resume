@@ -7,7 +7,7 @@ export default function Education() {
 			{/* Purdue */}
 			<div className={styles.educationStint}>
 				<h3 className={styles.accomplishment}>Purdue University</h3>
-				<span className={styles.trainingDate}>May 2012</span>
+				{/* <span className={styles.trainingDate}>May 2012</span> */}
 				<ul className={styles.bulletedList}>
 					<li>Bachelors Degree from the School of Technology: Computer and Information Technology</li>
 				</ul>
