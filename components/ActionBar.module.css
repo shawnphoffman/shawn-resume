@@ -1,7 +1,7 @@
 .actionBar {
 	position: fixed;
 	top: 16px;
-	left: 16px;
+	left: 8px;
 	display: flex;
 	flex-direction: column;
 	gap: 4px;
@@ -14,7 +14,7 @@
 .linkBar {
 	position: fixed;
 	bottom: 16px;
-	left: 16px;
+	left: 8px;
 	display: flex;
 	flex-direction: column;
 	font-size: 28px;
