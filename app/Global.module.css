@@ -80,7 +80,8 @@
 }
 @media print {
 	.title {
-		font-size: 36px;
+		/* font-size: 36px; */
+		margin-block-end: 5px;
 	}
 }
 
@@ -97,7 +98,7 @@
 }
 @media only screen and (max-width: 675px) {
 	.contactContainer {
-		display: none;
+		/* display: none; */
 	}
 }
 
@@ -279,6 +280,7 @@
 /* Divider */
 .divider {
 	margin-inline: -16px;
+	line-height: 16px;
 }
 :global(.theme-contrast) .divider {
 	stroke-width: 2px;
