@@ -9,6 +9,9 @@ import hoffstuff1 from '@/images/hoffstuff-1.png'
 import hoffstuff2 from '@/images/hoffstuff-2.png'
 import hoffstuff3 from '@/images/hoffstuff-3.png'
 import hoffstuff4 from '@/images/hoffstuff-4.png'
+import hoffstuff5 from '@/images/hoffstuff-5.png'
+import hoffstuff6 from '@/images/hoffstuff-6.png'
+import hoffstuff7 from '@/images/hoffstuff-7.png'
 import trashLight from '@/images/trash-light-1.jpg'
 import Pills from '@/components/Pills'
 import Link from 'next/link'
@@ -27,7 +30,7 @@ export default function Independent() {
 					<h3 className={styles.company}>
 						Family Wish Lists <span className={styles.lowercase}>aka</span> &quot;HoffStuff&quot;
 					</h3>
-					<PhotoBox images={[hoffstuff1, hoffstuff2, hoffstuff3, hoffstuff4]} />
+					<PhotoBox images={[hoffstuff1, hoffstuff2, hoffstuff3, hoffstuff4, hoffstuff5, hoffstuff6, hoffstuff7]} />
 					<Pills pills={['NextJS', 'TypeScript', 'Supabase']} />
 				</div>
 				<div className={styles.position}>
