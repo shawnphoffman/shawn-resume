@@ -2,9 +2,10 @@ import styles from 'app/Global.module.css'
 import PhotoBox from '@/components/PhotoBox'
 
 import hoffstuffIcon from '@/images/hoffstuff-icon.png'
+import wraptIcon from '@/images/wrapt-icon.png'
 import gamingIcon from '@/images/gaming-icon.png'
 import blueskyIcon from '@/images/bluesky-icon.png'
-import miscIcon from '@/images/misc-icon.png'
+import medstashIcon from '@/images/medstash-icon.png'
 import hoffstuff1 from '@/images/hoffstuff-1.png'
 import hoffstuff2 from '@/images/hoffstuff-2.png'
 import hoffstuff3 from '@/images/hoffstuff-3.png'
@@ -12,6 +13,22 @@ import hoffstuff4 from '@/images/hoffstuff-4.png'
 import hoffstuff5 from '@/images/hoffstuff-5.png'
 import hoffstuff6 from '@/images/hoffstuff-6.png'
 import hoffstuff7 from '@/images/hoffstuff-7.png'
+import contacts1 from '@/images/contacts-1.png'
+import contacts2 from '@/images/contacts-2.png'
+import contacts3 from '@/images/contacts-3.png'
+import contacts4 from '@/images/contacts-4.png'
+import med1 from '@/images/medstash-dark-1.png'
+import med2 from '@/images/medstash-dark-2.png'
+import med3 from '@/images/medstash-dark-3.png'
+import med4 from '@/images/medstash-dark-4.png'
+import med5 from '@/images/medstash-light-1.png'
+import med6 from '@/images/medstash-light-2.png'
+import med7 from '@/images/medstash-light-3.png'
+import med8 from '@/images/medstash-light-4.png'
+import wrapt1 from '@/images/wrapt-1.png'
+import wrapt2 from '@/images/wrapt-2.png'
+import wrapt3 from '@/images/wrapt-3.png'
+import wrapt4 from '@/images/wrapt-4.png'
 import trashLight from '@/images/trash-light-1.jpg'
 import Pills from '@/components/Pills'
 import Link from 'next/link'
@@ -38,7 +55,21 @@ export default function Independent() {
 						<li>Web application for creating and sharing wish lists with family and friends built with NextJS and Supabase.</li>
 						<li>User permissions make it possible to coordinate gifts and list managementwhile maintaining secrecy.</li>
 						<li>Fetches product details and images from websites when a URL is provided, simplifying the adding process.</li>
-						<li>Currently working towards open-sourcing the project and making it easy to self-host with Docker and BYO database.</li>
+					</ul>
+				</div>
+			</div>
+			{/* GiftWrapt */}
+			<div className={`${styles.stint} ${styles.noBreak} ${styles.noPrint}`}>
+				<div className={styles.companyContainer}>
+					<CompanyIcon image={wraptIcon} alt="GiftWrapt" />
+					<h3 className={styles.company}>GiftWrapt</h3>
+					<PhotoBox images={[wrapt1, wrapt2, wrapt3, wrapt4]} />
+					<Pills pills={['TanStack', 'TypeScript', 'Postgres', 'Docker']} />
+				</div>
+				<div className={styles.position}>
+					<ul className={styles.bulletedList}>
+						<li>WIP Complete ground-up rewrite of the family wish lists project, making it fully open-source and self-hostable.</li>
+						<li>Improved functionality and service-provider independent through self-container Docker deployment.</li>
 					</ul>
 				</div>
 			</div>
@@ -47,7 +78,6 @@ export default function Independent() {
 				<div className={styles.companyContainer}>
 					<CompanyIcon image={blueskyIcon} alt="Bluesky Projects" />
 					<h3 className={styles.company}>Bluesky Projects</h3>
-					{/* <PhotoBox images={[hoffstuff1, hoffstuff2, hoffstuff3, hoffstuff4]} /> */}
 					<Pills pills={['atproto', 'WebSockets', 'Docker']} />
 				</div>
 				<div className={styles.position}>
@@ -77,7 +107,6 @@ export default function Independent() {
 				<div className={styles.companyContainer}>
 					<CompanyIcon image={gamingIcon} alt="Video Game Companions" />
 					<h3 className={styles.company}>Video Game Companions</h3>
-					{/* <PhotoBox images={[hoffstuff1, hoffstuff2, hoffstuff3, hoffstuff4]} /> */}
 					<Pills pills={['NextJS', 'TypeScript', 'Unreal']} />
 				</div>
 				<div className={styles.position}>
@@ -100,13 +129,26 @@ export default function Independent() {
 			{/* Misc */}
 			<div className={`${styles.stint} ${styles.noPrint}`}>
 				<div className={styles.companyContainer}>
-					<CompanyIcon image={miscIcon} alt="Misc Projects" />
+					<CompanyIcon image={medstashIcon} alt="Misc Projects" />
 					<h3 className={styles.company}>Misc Projects</h3>
-					{/* <PhotoBox images={[hoffstuff1, hoffstuff2, hoffstuff3, hoffstuff4]} /> */}
 					<Pills pills={['NextJS', 'TypeScript', 'RSS', 'MapBox', 'Adobe']} />
 				</div>
 				<div className={styles.position}>
 					<ul className={styles.bulletedList}>
+						<li>
+							<Link href="https://github.com/shawnphoffman/medstash" target="_blank">
+								MedStash
+							</Link>
+							: Straightforward self-hosted web app for storing receipts for long-term HSA recordkeeping.{' '}
+							<PhotoBox images={[med1, med2, med3, med4, med5, med6, med7, med8]} />
+						</li>
+						<li>
+							<Link href="https://github.com/shawnphoffman/shared-contacts" target="_blank">
+								Shared Contacts
+							</Link>
+							: Self-hosted app for sharing and synchronizing contacts across devices with a modern UI.{' '}
+							<PhotoBox images={[contacts1, contacts2, contacts3, contacts4]} />
+						</li>
 						<li>
 							Podcast Landing Pages: Powered by NextJS and integrated blogs with Sanity Studio for some friend&apos;s podcasts -{' '}
 							<Link target="_blank" href="https://myweirdfoot.com">

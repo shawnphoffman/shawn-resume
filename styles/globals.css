@@ -78,13 +78,8 @@
 }
 @media print {
 	[class^='theme-'] {
-		/* --background: #f0f2f5;
-		--background: oklch(92% 0.004 286.32); */
-
-		--background: #f0f2f5;
+		--background: #fff;
 		--contentBackground: #fff;
-
-		--contentBackground: oklch(98.5% 0 0);
 		--boxShadow: oklch(55.2% 0.016 285.938 / 0.5);
 		--content: oklch(14.1% 0.005 285.823);
 		--divider: oklch(87.1% 0.006 286.286);
@@ -93,7 +88,6 @@
 		--positionName: oklch(35.9% 0.144 278.697);
 		--themeIcons: oklch(70.5% 0.015 286.067 / 0.5);
 		--dividerFill: transparent;
-
 		--pill: var(--content);
 		--pillBorder: oklch(44.2% 0.017 285.786);
 		--pillBackground: var(--background);
