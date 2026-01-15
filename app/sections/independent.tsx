@@ -53,6 +53,7 @@ export default function Independent() {
 				<div className={styles.position}>
 					<ul className={styles.bulletedList}>
 						<li>Web application for creating and sharing wish lists with family and friends built with NextJS and Supabase.</li>
+						<li>Users can also manage their own gift giving, off-list addons, gift ideas, and spend tracking within the app.</li>
 						<li>User permissions make it possible to coordinate gifts and list managementwhile maintaining secrecy.</li>
 						<li>Fetches product details and images from websites when a URL is provided, simplifying the adding process.</li>
 					</ul>
