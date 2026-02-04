@@ -112,7 +112,10 @@ export default function Employment() {
 			</div>
 			{/* Sogeti */}
 			<div className={styles.stint}>
-				<h3 className={styles.company}>Sogeti USA</h3>
+				<div className={styles.companyContainer}>
+					<h3 className={styles.company}>Sogeti USA</h3>
+					<Pills pills={['.NET', 'JavaScript']} />
+				</div>
 				<div className={styles.position}>
 					<h4 className={styles.positionName}>Senior Consultant / Software Engineer</h4>
 					<span className={styles.positionDate}>June 2012 - June 2015</span>
