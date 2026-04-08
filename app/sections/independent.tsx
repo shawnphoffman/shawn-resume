@@ -82,6 +82,9 @@ export default function Independent() {
 					<CompanyIcon image={hospitalityIcon} alt="Hospitality Channels" />
 					<h3 className={styles.company}>Hospitality Channels</h3>
 					<VideoBox src="/sample-output.mp4" />
+					<Link href="https://github.com/shawnphoffman/hospitality-channels" target="_blank" aria-label="Hospitality Channels on GitHub">
+						<FontAwesomeIcon size="sm" icon={faArrowUpRightFromSquare} />
+					</Link>
 					<Pills pills={['TypeScript', 'FFmpeg', 'Docker']} />
 				</div>
 				<div className={styles.position}>
