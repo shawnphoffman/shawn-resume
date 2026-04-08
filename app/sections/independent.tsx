@@ -1,9 +1,11 @@
 import styles from 'app/Global.module.css'
 import PhotoBox from '@/components/PhotoBox'
+import VideoBox from '@/components/VideoBox'
 
 import hoffstuffIcon from '@/images/hoffstuff-icon.png'
 import wraptIcon from '@/images/wrapt-icon.png'
 import gamingIcon from '@/images/gaming-icon.png'
+import hospitalityIcon from '@/images/hospitality-channels-icon.png'
 import blueskyIcon from '@/images/bluesky-icon.png'
 import medstashIcon from '@/images/medstash-icon.png'
 import hoffstuff1 from '@/images/hoffstuff-1.png'
@@ -71,6 +73,25 @@ export default function Independent() {
 					<ul className={styles.bulletedList}>
 						<li>WIP Complete ground-up rewrite of the family wish lists project, making it fully open-source and self-hostable.</li>
 						<li>Improved functionality and service-provider independent through self-container Docker deployment.</li>
+					</ul>
+				</div>
+			</div>
+			{/* Hospitality Channels */}
+			<div className={`${styles.stint} ${styles.noPrint}`}>
+				<div className={styles.companyContainer}>
+					<CompanyIcon image={hospitalityIcon} alt="Hospitality Channels" />
+					<h3 className={styles.company}>Hospitality Channels</h3>
+					<VideoBox src="/sample-output.mp4" />
+					<Pills pills={['TypeScript', 'FFmpeg', 'Docker']} />
+				</div>
+				<div className={styles.position}>
+					<ul className={styles.bulletedList}>
+						<li>Self-hosted guest TV channel creation system for hospitality environments like guest rooms and Airbnbs.</li>
+						<li>
+							Template-driven video clips composable into multi-clip programs with background audio, rendered to MP4 via headless Chromium
+							and FFmpeg.
+						</li>
+						<li>Built-in Tunarr integration for pushing published channels directly to IPTV playlists.</li>
 					</ul>
 				</div>
 			</div>
