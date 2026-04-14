@@ -36,6 +36,12 @@ const ResumePage = () => {
 						<Divider />
 						<Hobbies />
 					</div>
+					<div className={styles.onlyPrint}>
+						<Divider />
+						<div className={styles.seeMore}>
+							See more at <a href="#">https://shawnhoffman.dev</a>...
+						</div>
+					</div>
 				</div>
 			</div>
 		</>

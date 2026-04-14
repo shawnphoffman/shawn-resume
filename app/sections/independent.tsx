@@ -47,7 +47,7 @@ export default function Independent() {
 				<div className={styles.companyContainer}>
 					<CompanyIcon image={hoffstuffIcon} alt="Wish Lists / HoffStuff" />
 					<h3 className={styles.company}>
-						Family Wish Lists <span className={styles.lowercase}>aka</span> &quot;HoffStuff&quot;
+						Family Wish Lists <span className={styles.lowercase}>/ </span> &quot;HoffStuff&quot;
 					</h3>
 					<PhotoBox images={[hoffstuff1, hoffstuff2, hoffstuff3, hoffstuff4, hoffstuff5, hoffstuff6, hoffstuff7]} />
 					<Pills pills={['NextJS', 'TypeScript', 'Supabase']} />

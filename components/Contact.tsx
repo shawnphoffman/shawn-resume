@@ -11,7 +11,7 @@ const Contact = () => {
 	// Memoize the decoded values to avoid re-computation on every render
 	const contactInfo = useMemo(
 		() => ({
-			website: 'https://shawn.party',
+			website: 'https://shawnhoffman.dev',
 			email: typeof window !== 'undefined' ? window.atob('c2hhd25Ac2VudC5hcw==') : '',
 			phone: typeof window !== 'undefined' ? window.atob('MzE3LjYwNC4wMzI1') : '',
 		}),

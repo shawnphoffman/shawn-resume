@@ -1,3 +1,6 @@
+.onlyPrint {
+	display: none;
+}
 @media print {
 	.noPrint {
 		display: none;
@@ -5,6 +8,9 @@
 	.noBreak {
 		break-inside: avoid-page;
 		page-break-inside: avoid;
+	}
+	.onlyPrint {
+		display: block;
 	}
 }
 
@@ -296,4 +302,8 @@
 
 .lowercase {
 	text-transform: lowercase;
+}
+
+.seeMore {
+	font-weight: 500;
 }

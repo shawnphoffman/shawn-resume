@@ -8,6 +8,17 @@ export default function Employment() {
 	return (
 		<>
 			<h2 className={styles.sectionHeader}>Relevant Employment</h2>
+			{/* Contract Work */}
+			<div className={styles.stint}>
+				<div className={styles.companyContainer}>
+					<h3 className={styles.company}>Independent Contractor</h3>
+					<Pills pills={['AI', 'React', 'NextJS', 'Rails']} />
+				</div>
+				<div className={styles.position}>
+					<h4 className={styles.positionName}>Contract Software Engineer</h4>
+					<span className={styles.positionDate}>January 2025 - Current</span>
+				</div>
+			</div>
 			{/* SnowOwl */}
 			<div className={styles.stint}>
 				<div className={styles.companyContainer}>
@@ -16,7 +27,13 @@ export default function Employment() {
 				</div>
 				<div className={styles.position}>
 					<h4 className={styles.positionName}>Software Engineer</h4>
-					<span className={styles.positionDate}>September 2023 - Current</span>
+					<span className={styles.positionDate}>September 2023 - December 2025</span>
+					<ul className={styles.bulletedList}>
+						<li>
+							Developed front-end components for AI-powered workflow automation platform including workflow editors, design systems, dynamic
+							form builders, and AI-powered chat interfaces.
+						</li>
+					</ul>
 				</div>
 			</div>
 			{/* Coinbase */}
@@ -87,12 +104,12 @@ export default function Employment() {
 			{/* ADESA */}
 			<div className={styles.stint}>
 				<div className={styles.companyContainer}>
-					<h3 className={styles.company}>ADESA / AutoVIN</h3>
+					<h3 className={styles.company}>ADESA / Sogeti</h3>
 					<Pills pills={['.NET', 'JavaScript', 'CSS']} />
 				</div>
 				<div className={styles.position}>
-					<h4 className={styles.positionName}>Developer Consultant and Scrum Master</h4>
-					<span className={styles.positionDate}>August 2012 - June 2015</span>
+					<h4 className={styles.positionName}>Software Engineer & Scrum Master</h4>
+					<span className={styles.positionDate}>June 2012 - June 2015</span>
 					<div className={styles.noPrint}>
 						<ul className={styles.bulletedList}>
 							<li>
@@ -106,21 +123,6 @@ export default function Employment() {
 							<li>Led development team in technical effort to utilize modern Azure capabilities as well as optimize web performance</li>
 							<li>Implemented an enterprise-wide, customer-facing, industry-standard grading system for remarketed vehicles.</li>
 							<li>Researched and documented architecture and design principles for inherited large-scale ExtJS web application.</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			{/* Sogeti */}
-			<div className={styles.stint}>
-				<div className={styles.companyContainer}>
-					<h3 className={styles.company}>Sogeti USA</h3>
-					<Pills pills={['.NET', 'JavaScript']} />
-				</div>
-				<div className={styles.position}>
-					<h4 className={styles.positionName}>Senior Consultant / Software Engineer</h4>
-					<span className={styles.positionDate}>June 2012 - June 2015</span>
-					<div className={styles.noPrint}>
-						<ul className={styles.bulletedList}>
 							<li>
 								Developed a range of full-stack systems including .NET web service offerings, customizable cloud-based enterprise systems,
 								single page web applications, Oracle master-data systems, and existing system stabilization/modernization.
