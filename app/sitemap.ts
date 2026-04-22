@@ -6,5 +6,9 @@ export default function sitemap() {
 			url: `${root}`,
 			lastModified: new Date(),
 		},
+		{
+			url: `${root}/llms.txt`,
+			lastModified: new Date(),
+		},
 	]
 }

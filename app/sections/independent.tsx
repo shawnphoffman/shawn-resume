@@ -1,6 +1,16 @@
+import type { ReactNode } from 'react'
+import Link from 'next/link'
+import type { StaticImageData } from 'next/image'
+
 import styles from 'app/Global.module.css'
 import PhotoBox from '@/components/PhotoBox'
 import VideoBox from '@/components/VideoBox'
+import Pills from '@/components/Pills'
+import CompanyIcon from '@/components/CompanyIcon'
+import { faArrowUpRightFromSquare } from '@awesome.me/kit-94ef14ccff/icons/classic/solid'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { independentProjects, type ProjectBulletSegment } from 'app/resume-data'
 
 import hoffstuffIcon from '@/images/hoffstuff-icon.png'
 import wraptIcon from '@/images/wrapt-icon.png'
@@ -32,242 +42,93 @@ import wrapt2 from '@/images/wrapt-2.png'
 import wrapt3 from '@/images/wrapt-3.png'
 import wrapt4 from '@/images/wrapt-4.png'
 import trashLight from '@/images/trash-light-1.jpg'
-import Pills from '@/components/Pills'
-import Link from 'next/link'
-import CompanyIcon from '@/components/CompanyIcon'
-import { faArrowUpRightFromSquare } from '@awesome.me/kit-94ef14ccff/icons/classic/solid'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+const iconByKey: Record<string, StaticImageData> = {
+	hoffstuff: hoffstuffIcon,
+	wrapt: wraptIcon,
+	gaming: gamingIcon,
+	hospitality: hospitalityIcon,
+	bluesky: blueskyIcon,
+	medstash: medstashIcon,
+}
+
+const photosByKey: Record<string, StaticImageData[]> = {
+	hoffstuff: [hoffstuff1, hoffstuff2, hoffstuff3, hoffstuff4, hoffstuff5, hoffstuff6, hoffstuff7],
+	wrapt: [wrapt1, wrapt2, wrapt3, wrapt4],
+	medstash: [med1, med2, med3, med4, med5, med6, med7, med8],
+	contacts: [contacts1, contacts2, contacts3, contacts4],
+	trash: [trashLight],
+}
+
+const videoByKey: Record<string, string> = {
+	hospitalityVideo: '/sample-output.mp4',
+}
+
+const displayNameOverrides: Record<string, ReactNode> = {
+	hoffstuff: (
+		<>
+			Family Wish Lists <span className={styles.lowercase}>/ </span> &quot;HoffStuff&quot;
+		</>
+	),
+}
+
+function renderMedia(mediaKey: string) {
+	if (photosByKey[mediaKey]) return <PhotoBox images={photosByKey[mediaKey]} />
+	if (videoByKey[mediaKey]) return <VideoBox src={videoByKey[mediaKey]} />
+	return null
+}
+
+function renderSegment(segment: ProjectBulletSegment, key: number): ReactNode {
+	switch (segment.kind) {
+		case 'text':
+			return <span key={key}>{segment.text}</span>
+		case 'link':
+			return (
+				<Link key={key} href={segment.href} target="_blank">
+					{segment.text}
+				</Link>
+			)
+		case 'iconLink':
+			return (
+				<Link key={key} href={segment.href} target="_blank" aria-label={segment.label}>
+					<FontAwesomeIcon size="sm" icon={faArrowUpRightFromSquare} />
+				</Link>
+			)
+		case 'mediaInline':
+			return <span key={key}>{renderMedia(segment.mediaKey)}</span>
+	}
+}
 
 export default function Independent() {
 	return (
 		<>
 			<h2 className={styles.sectionHeader}>Independent Projects</h2>
-			{/* HoffStuff */}
-			<div className={`${styles.stint} ${styles.noBreak}`}>
-				<div className={styles.companyContainer}>
-					<CompanyIcon image={hoffstuffIcon} alt="Wish Lists / HoffStuff" />
-					<h3 className={styles.company}>
-						Family Wish Lists <span className={styles.lowercase}>/ </span> &quot;HoffStuff&quot;
-					</h3>
-					<PhotoBox images={[hoffstuff1, hoffstuff2, hoffstuff3, hoffstuff4, hoffstuff5, hoffstuff6, hoffstuff7]} />
-					<Pills pills={['NextJS', 'TypeScript', 'Supabase']} />
-				</div>
-				<div className={styles.position}>
-					<ul className={styles.bulletedList}>
-						<li>Web application for creating and sharing wish lists with family and friends built with NextJS and Supabase.</li>
-						<li>Users can also manage their own gift giving, off-list addons, gift ideas, and spend tracking within the app.</li>
-						<li>User permissions make it possible to coordinate gifts and list managementwhile maintaining secrecy.</li>
-						<li>Fetches product details and images from websites when a URL is provided, simplifying the adding process.</li>
-					</ul>
-				</div>
-			</div>
-			{/* GiftWrapt */}
-			<div className={`${styles.stint} ${styles.noBreak} ${styles.noPrint}`}>
-				<div className={styles.companyContainer}>
-					<CompanyIcon image={wraptIcon} alt="GiftWrapt" />
-					<h3 className={styles.company}>GiftWrapt</h3>
-					<PhotoBox images={[wrapt1, wrapt2, wrapt3, wrapt4]} />
-					<Pills pills={['TanStack', 'TypeScript', 'Postgres', 'Docker']} />
-				</div>
-				<div className={styles.position}>
-					<ul className={styles.bulletedList}>
-						<li>WIP Complete ground-up rewrite of the family wish lists project, making it fully open-source and self-hostable.</li>
-						<li>Improved functionality and service-provider independent through self-container Docker deployment.</li>
-					</ul>
-				</div>
-			</div>
-			{/* Hospitality Channels */}
-			<div className={`${styles.stint} ${styles.noPrint}`}>
-				<div className={styles.companyContainer}>
-					<CompanyIcon image={hospitalityIcon} alt="Hospitality Channels" />
-					<h3 className={styles.company}>Hospitality Channels</h3>
-					<VideoBox src="/sample-output.mp4" />
-					<Link href="https://github.com/shawnphoffman/hospitality-channels" target="_blank" aria-label="Hospitality Channels on GitHub">
-						<FontAwesomeIcon size="sm" icon={faArrowUpRightFromSquare} />
-					</Link>
-					<Pills pills={['TypeScript', 'FFmpeg', 'Docker']} />
-				</div>
-				<div className={styles.position}>
-					<ul className={styles.bulletedList}>
-						<li>Self-hosted guest TV channel creation system for hospitality environments like guest rooms and Airbnbs.</li>
-						<li>
-							Template-driven video clips composable into multi-clip programs with background audio, rendered to MP4 via headless Chromium
-							and FFmpeg.
-						</li>
-						<li>Built-in Tunarr integration for pushing published channels directly to IPTV playlists.</li>
-					</ul>
-				</div>
-			</div>
-			{/* BlueSky */}
-			<div className={`${styles.stint} ${styles.noPrint}`}>
-				<div className={styles.companyContainer}>
-					<CompanyIcon image={blueskyIcon} alt="Bluesky Projects" />
-					<h3 className={styles.company}>Bluesky Projects</h3>
-					<Pills pills={['atproto', 'WebSockets', 'Docker']} />
-				</div>
-				<div className={styles.position}>
-					<ul className={styles.bulletedList}>
-						<li>
-							Built a custom{' '}
-							<Link href="https://bsky.app/profile/dev.shawn.party/feed/star-wars" target="_blank" aria-label="Star Wars Bluesky Feed">
-								Star Wars feed
-							</Link>{' '}
-							with some of the best Star Wars content promoting positivity and community.
-							<Link href="https://feed.justshillin.com/" target="_blank" aria-label="Star Wars Bluesky Feed Client">
-								<FontAwesomeIcon size="sm" icon={faArrowUpRightFromSquare} />
-							</Link>
-						</li>
-						<li>
-							Host and maintain a custom Bluesky{' '}
-							<Link href="https://bsky.app/profile/mod.shawn.party" target="_blank" aria-label="Spoiler Droid on Bluesky">
-								moderation bot account
-							</Link>{' '}
-							and labeler to help identify potential spoiler content.
-						</li>
-					</ul>
-				</div>
-			</div>
-			{/* Gaming */}
-			<div className={`${styles.stint} ${styles.noPrint}`}>
-				<div className={styles.companyContainer}>
-					<CompanyIcon image={gamingIcon} alt="Video Game Companions" />
-					<h3 className={styles.company}>Video Game Companions</h3>
-					<Pills pills={['NextJS', 'TypeScript', 'Unreal']} />
-				</div>
-				<div className={styles.position}>
-					<ul className={styles.bulletedList}>
-						<li>
-							<Link href="https://satisfactory-notebook.com/" target="_blank">
-								Satisfactory Notebook
-							</Link>
-							: A game companion for those that prefer to print things out or just like a quick reference.
-						</li>
-						<li>
-							<Link href="https://dyson-sphere-planner.com/" target="_blank">
-								Dyson Sphere Planner
-							</Link>
-							: A companion for Dyson Sphere Program that allows you to easily reference and print recipes.
-						</li>
-					</ul>
-				</div>
-			</div>
-			{/* Misc */}
-			<div className={`${styles.stint} ${styles.noPrint}`}>
-				<div className={styles.companyContainer}>
-					<CompanyIcon image={medstashIcon} alt="Misc Projects" />
-					<h3 className={styles.company}>Misc Projects</h3>
-					<Pills pills={['NextJS', 'TypeScript', 'RSS', 'MapBox', 'Adobe']} />
-				</div>
-				<div className={styles.position}>
-					<ul className={styles.bulletedList}>
-						<li>
-							<Link href="https://github.com/shawnphoffman/medstash" target="_blank">
-								MedStash
-							</Link>
-							: Straightforward self-hosted web app for storing receipts for long-term HSA recordkeeping.{' '}
-							<PhotoBox images={[med1, med2, med3, med4, med5, med6, med7, med8]} />
-						</li>
-						<li>
-							<Link href="https://github.com/shawnphoffman/shared-contacts" target="_blank">
-								Shared Contacts
-							</Link>
-							: Self-hosted app for sharing and synchronizing contacts across devices with a modern UI.{' '}
-							<PhotoBox images={[contacts1, contacts2, contacts3, contacts4]} />
-						</li>
-						<li>
-							Podcast Landing Pages: Powered by NextJS and integrated blogs with Sanity Studio for some friend&apos;s podcasts -{' '}
-							<Link target="_blank" href="https://myweirdfoot.com">
-								High Potion
-							</Link>{' '}
-							/{' '}
-							<Link target="_blank" href="https://blueharvest.rocks">
-								Blue Harvest
-							</Link>{' '}
-							/{' '}
-							<Link target="_blank" href="https://jammedtransmissions.com">
-								Jammed Transmissions
-							</Link>{' '}
-							/{' '}
-							<Link target="_blank" href="https://blueypodcast.com">
-								Dinner with the Heelers
-							</Link>{' '}
-							/{' '}
-							<Link target="_blank" href="https://scruffypod.com">
-								Scruffy Lookin Podcasters
-							</Link>{' '}
-							.
-						</li>
-						<li>
-							<Link href="https://2024.madison.rocks/" target="_blank">
-								News Years Eras Letter
-							</Link>
-							: My take on Madison&apos;s New Years Letter, themed and inspired by the Eras Tour.
-						</li>
-						<li>
-							<Link href="https://madison.rocks/" target="_blank">
-								PCT Hike Tracker
-							</Link>
-							: Visualizing Madison&apos;s PCT adventure with links to bonus content like newsletters and photos.
-						</li>
-						<li>
-							<Link href="https://swc.events/" target="_blank">
-								Star Wars Celebration Events
-							</Link>
-							: A convention companion making it easy to plan your trip with official and unofficial events.
-						</li>
-						<li>
-							<Link href="https://github.com/shawnphoffman/ae-photo-slideshow" target="_blank">
-								After Effects Plugin
-							</Link>
-							: Allows you to use photo GPS data to fetch the city and state, add it and the date to a composition as a text layer, and
-							batch process everything (with transitions) to an output composition. This was used to create multiple 600+ photo slideshows
-							for long-distance hikers.
-						</li>
-						<li>
-							<Link target="_blank" href="https://goober.house/">
-								Tahoe Air Quality
-							</Link>
-							: Dead simple air quality indicator using data from a local air quality station and local APIs.
-						</li>
-						<li>
-							Home Automations: The most popular being an outdoor light thats color helps you know what the next trash pickup is, powered by
-							Home Assistant and a custom integration with the waste management website. Blue indicates that it is a recycling week and
-							green is for yard waste. <PhotoBox images={[trashLight]} />
-						</li>
-						{/* <li>
-							<Link target="_blank" href="https://obs.shawn.party/">
-								OBS Text Helpers
-							</Link>
-							: Free animated text overlays for small-scale streamers to use in OBS.
-						</li> */}
-					</ul>
-				</div>
-			</div>
-			{/* Sabbatical */}
-			{/* <div className={styles.stint}>
-				<h3 className={styles.company}>Sabbatical</h3>
-				<div className={styles.position}>
-					<span className={styles.positionDate}>October 2022 - September 2023</span>
-					<ul className={styles.bulletedList}>
-						<li>Took a 4-week road trip across the country; visiting National Parks, family, friends, and amazing food.</li>
-						<li>Focused a lot of my time as a 2023 PCT Trail Angel, supporting hikers with food, lodging, and &quot;trail magic&quot;.</li>
-						<li>
-							Refactored{' '}
-							<Link target="_blank" href="https://blog.shawn.party/">
-								my blog
-							</Link>{' '}
-							to make it easier to document and share my never-ending side projects.
-						</li>
-						<li>Contributed to open-source projects like AudiobookShelf, Flexget, etc.</li>
-						<li>Started live-streaming model-building and video games on Twitch, reaching Affiliate within 2 months.</li>
-						<li>Developed nonsensical Twitch and Discord bots for some friends podcast and live-stream community.</li>
-						<li>
-							Custom-built my own stickless arcade fighting control out of laser-cut acrylic and off-the-shelf components. It is pretty cool
-							and I look forward to challenging everyone in Street Fighter 6.
-						</li>
-					</ul>
-				</div>
-			</div> */}
+			{independentProjects.map(project => {
+				const classes = [styles.stint, project.noBreak ? styles.noBreak : '', project.noPrint ? styles.noPrint : ''].filter(Boolean).join(' ')
+				const icon = project.iconKey ? iconByKey[project.iconKey] : null
+				return (
+					<div key={project.slug} className={classes}>
+						<div className={styles.companyContainer}>
+							{icon ? <CompanyIcon image={icon} alt={project.iconAlt ?? project.name} /> : null}
+							<h3 className={styles.company}>{displayNameOverrides[project.slug] ?? project.name}</h3>
+							{project.mediaKey ? renderMedia(project.mediaKey) : null}
+							{project.externalLink ? (
+								<Link href={project.externalLink.href} target="_blank" aria-label={project.externalLink.label}>
+									<FontAwesomeIcon size="sm" icon={faArrowUpRightFromSquare} />
+								</Link>
+							) : null}
+							<Pills pills={project.pills} />
+						</div>
+						<div className={styles.position}>
+							<ul className={styles.bulletedList}>
+								{project.bullets.map((bullet, bulletIndex) => (
+									<li key={bulletIndex}>{bullet.segments.map((segment, segmentIndex) => renderSegment(segment, segmentIndex))}</li>
+								))}
+							</ul>
+						</div>
+					</div>
+				)
+			})}
 		</>
 	)
 }

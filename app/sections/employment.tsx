@@ -4,133 +4,48 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styles from 'app/Global.module.css'
 import Link from 'next/link'
 
+import { employment } from 'app/resume-data'
+
 export default function Employment() {
 	return (
 		<>
 			<h2 className={styles.sectionHeader}>Relevant Employment</h2>
-			{/* Contract Work */}
-			<div className={styles.stint}>
-				<div className={styles.companyContainer}>
-					<h3 className={styles.company}>Independent Contractor</h3>
-					<Pills pills={['AI', 'React', 'NextJS', 'Rails']} />
-				</div>
-				<div className={styles.position}>
-					<h4 className={styles.positionName}>Contract Software Engineer</h4>
-					<span className={styles.positionDate}>January 2025 - Current</span>
-				</div>
-			</div>
-			{/* SnowOwl */}
-			<div className={styles.stint}>
-				<div className={styles.companyContainer}>
-					<h3 className={styles.company}>Snow Owl</h3>
-					<Pills pills={['Svelte', 'AI', 'Framer']} />
-				</div>
-				<div className={styles.position}>
-					<h4 className={styles.positionName}>Software Engineer</h4>
-					<span className={styles.positionDate}>September 2023 - December 2025</span>
-					<ul className={styles.bulletedList}>
-						<li>
-							Developed front-end components for AI-powered workflow automation platform including workflow editors, design systems, dynamic
-							form builders, and AI-powered chat interfaces.
-						</li>
-					</ul>
-				</div>
-			</div>
-			{/* Coinbase */}
-			<div className={styles.stint}>
-				<div className={styles.companyContainer}>
-					<h3 className={styles.company}>Coinbase</h3>
-
-					<Pills pills={['React', 'TypeScript', 'React Native']} />
-				</div>
-				<div className={styles.position}>
-					<h4 className={styles.positionName}>Senior Software Engineer</h4>
-					<span className={styles.positionDate}>October 2020 - September 2022</span>
-					<ul className={styles.bulletedList}>
-						<li>
-							Led the front-end decomposition of Coinbase-wide login from Rails monolith to React application.
-							<Link href="https://login.coinbase.com" target="_blank" aria-label="View Coinbase Login">
-								<FontAwesomeIcon size="sm" icon={faArrowUpRightFromSquare} />
-							</Link>
-						</li>
-						<li>Converted mobile app native login to web-based login experience; reducing duplication and deployment times.</li>
-						<li>Added registration and profile support for decentralized identity ENS names through Coinbase Wallet extension.</li>
-						<li>Mentored incoming software engineers on best practices, code quality, career coaching, and criteria for advancement.</li>
-						<li>Worked extensively to decompose frontends out of legacy Rails monolith into their own modern applications.</li>
-					</ul>
-				</div>
-			</div>
-			{/* DySi */}
-			<div className={styles.stint}>
-				<div className={styles.companyContainer}>
-					<h3 className={styles.company}>Dynamic Signal</h3>
-					<Pills pills={['React', 'JavaScript', 'Management']} />
-				</div>
-				<div className={styles.position}>
-					<h4 className={styles.positionName}>Staff Software Engineer</h4>
-					<span className={styles.positionDate}>July 2019 - June 2020</span>
-					<ul className={styles.bulletedList}>
-						<li>Focused attention on standing up new React web application to replace 8-year old management site monolith.</li>
-						<li>Collaborated with lead front-end architect to rapidly develop groundwork alongside iterative design process.</li>
-					</ul>
-				</div>
-				<div className={styles.position}>
-					<h4 className={styles.positionName}>Manager of Front-End Engineering</h4>
-					<span className={styles.positionDate}>May 2017 - July 2019</span>
-					<ul className={styles.bulletedList}>
-						<li>
-							Encouraged and grew team of engineers that maintained all front-end web applications and the platform&apos;s public API.
-						</li>
-						<li>Championed and led major modernization project converting the member-facing site from .NET MVC &amp; Knockout to React.</li>
-						<li>Created a desktop application and build tool in an effort to drive end user engagement and combat legacy browser usage.</li>
-						<li>Applied best practices and an empathetic approach when creating a swim lane process that helped engineering scale.</li>
-						<li>Architected, organized, and managed ambitious scripting engine project; making integrations quick and easy to deliver.</li>
-						<li>Awarded company MVP Q4 2018 from individually submitted feedback and team nominations.</li>
-						<li>Organized first internal hackathon from concept to execution, leading to multiple entries being added to the product.</li>
-					</ul>
-				</div>
-				<div className={styles.position}>
-					<h4 className={styles.positionName}>Senior Software Engineer</h4>
-					<span className={styles.positionDate}>July 2015 - May 2017</span>
-					<ul className={styles.bulletedList}>
-						<li>Standardized public API development and created the user interface and tooling for generated API documentation.</li>
-						<li>
-							Founded the internal &quot;Culture Committee&quot;, focused on promoting positive company culture and inclusion across
-							offices.
-						</li>
-					</ul>
-				</div>
-			</div>
-			{/* ADESA */}
-			<div className={styles.stint}>
-				<div className={styles.companyContainer}>
-					<h3 className={styles.company}>ADESA / Sogeti</h3>
-					<Pills pills={['.NET', 'JavaScript', 'CSS']} />
-				</div>
-				<div className={styles.position}>
-					<h4 className={styles.positionName}>Software Engineer & Scrum Master</h4>
-					<span className={styles.positionDate}>June 2012 - June 2015</span>
-					<div className={styles.noPrint}>
-						<ul className={styles.bulletedList}>
-							<li>
-								Designed enterprise web portal for creating and managing variable pricing engine across all auctions and business units.
-							</li>
-							<li>Upgraded business-critical web front-end from MVC 2 to MVC 5.2 and converted all content from ASP Forms to Razor.</li>
-							<li>
-								Refactored entire application from page-specific CSS to a globally consolidated LESS structure utilizing common variables.
-							</li>
-							<li>Developed workflow for efficient vehicle identification based on manufacturer build data and process improvement.</li>
-							<li>Led development team in technical effort to utilize modern Azure capabilities as well as optimize web performance</li>
-							<li>Implemented an enterprise-wide, customer-facing, industry-standard grading system for remarketed vehicles.</li>
-							<li>Researched and documented architecture and design principles for inherited large-scale ExtJS web application.</li>
-							<li>
-								Developed a range of full-stack systems including .NET web service offerings, customizable cloud-based enterprise systems,
-								single page web applications, Oracle master-data systems, and existing system stabilization/modernization.
-							</li>
-						</ul>
+			{employment.map(stint => (
+				<div key={stint.company} className={styles.stint}>
+					<div className={styles.companyContainer}>
+						<h3 className={styles.company}>{stint.company}</h3>
+						<Pills pills={stint.pills} />
 					</div>
+					{stint.positions.map(position => {
+						const bulletList = position.bullets?.length ? (
+							<ul className={styles.bulletedList}>
+								{position.bullets.map((bullet, bulletIndex) => (
+									<li key={bulletIndex}>
+										{bullet.text}
+										{bullet.externalLink ? (
+											<>
+												{' '}
+												<Link href={bullet.externalLink.href} target="_blank" aria-label={bullet.externalLink.label}>
+													<FontAwesomeIcon size="sm" icon={faArrowUpRightFromSquare} />
+												</Link>
+											</>
+										) : null}
+									</li>
+								))}
+							</ul>
+						) : null
+						return (
+							<div key={position.title + position.start} className={styles.position}>
+								<h4 className={styles.positionName}>{position.title}</h4>
+								<span className={styles.positionDate}>
+									{position.start} - {position.end}
+								</span>
+								{position.bulletsNoPrint && bulletList ? <div className={styles.noPrint}>{bulletList}</div> : bulletList}
+							</div>
+						)
+					})}
 				</div>
-			</div>
+			))}
 		</>
 	)
 }
