@@ -94,9 +94,13 @@ export const employment: Employment[] = [
 				bullets: [
 					{ text: "Encouraged and grew team of engineers that maintained all front-end web applications and the platform's public API." },
 					{ text: 'Championed and led major modernization project converting the member-facing site from .NET MVC & Knockout to React.' },
-					{ text: 'Created a desktop application and build tool in an effort to drive end user engagement and combat legacy browser usage.' },
+					{
+						text: 'Created a desktop application and build tool in an effort to drive end user engagement and combat legacy browser usage.',
+					},
 					{ text: 'Applied best practices and an empathetic approach when creating a swim lane process that helped engineering scale.' },
-					{ text: 'Architected, organized, and managed ambitious scripting engine project; making integrations quick and easy to deliver.' },
+					{
+						text: 'Architected, organized, and managed ambitious scripting engine project; making integrations quick and easy to deliver.',
+					},
 					{ text: 'Awarded company MVP Q4 2018 from individually submitted feedback and team nominations.' },
 					{ text: 'Organized first internal hackathon from concept to execution, leading to multiple entries being added to the product.' },
 				],
@@ -124,9 +128,13 @@ export const employment: Employment[] = [
 				end: 'June 2015',
 				bulletsNoPrint: true,
 				bullets: [
-					{ text: 'Designed enterprise web portal for creating and managing variable pricing engine across all auctions and business units.' },
+					{
+						text: 'Designed enterprise web portal for creating and managing variable pricing engine across all auctions and business units.',
+					},
 					{ text: 'Upgraded business-critical web front-end from MVC 2 to MVC 5.2 and converted all content from ASP Forms to Razor.' },
-					{ text: 'Refactored entire application from page-specific CSS to a globally consolidated LESS structure utilizing common variables.' },
+					{
+						text: 'Refactored entire application from page-specific CSS to a globally consolidated LESS structure utilizing common variables.',
+					},
 					{ text: 'Developed workflow for efficient vehicle identification based on manufacturer build data and process improvement.' },
 					{ text: 'Led development team in technical effort to utilize modern Azure capabilities as well as optimize web performance' },
 					{ text: 'Implemented an enterprise-wide, customer-facing, industry-standard grading system for remarketed vehicles.' },
@@ -173,10 +181,20 @@ export const independentProjects: Project[] = [
 		pills: ['NextJS', 'TypeScript', 'Supabase'],
 		noBreak: true,
 		bullets: [
-			{ segments: [{ kind: 'text', text: 'Web application for creating and sharing wish lists with family and friends built with NextJS and Supabase.' }] },
 			{
 				segments: [
-					{ kind: 'text', text: 'Users can also manage their own gift giving, off-list addons, gift ideas, and spend tracking within the app.' },
+					{
+						kind: 'text',
+						text: 'Web application for creating and sharing wish lists with family and friends built with NextJS and Supabase.',
+					},
+				],
+			},
+			{
+				segments: [
+					{
+						kind: 'text',
+						text: 'Users can also manage their own gift giving, off-list addons, gift ideas, and spend tracking within the app.',
+					},
 				],
 			},
 			{
@@ -186,7 +204,10 @@ export const independentProjects: Project[] = [
 			},
 			{
 				segments: [
-					{ kind: 'text', text: 'Fetches product details and images from websites when a URL is provided, simplifying the adding process.' },
+					{
+						kind: 'text',
+						text: 'Fetches product details and images from websites when a URL is provided, simplifying the adding process.',
+					},
 				],
 			},
 		],
@@ -201,8 +222,19 @@ export const independentProjects: Project[] = [
 		noBreak: true,
 		noPrint: true,
 		bullets: [
-			{ segments: [{ kind: 'text', text: 'WIP Complete ground-up rewrite of the family wish lists project, making it fully open-source and self-hostable.' }] },
-			{ segments: [{ kind: 'text', text: 'Improved functionality and service-provider independent through self-container Docker deployment.' }] },
+			{
+				segments: [
+					{
+						kind: 'text',
+						text: 'WIP Complete ground-up rewrite of the family wish lists project, making it fully open-source and self-hostable.',
+					},
+				],
+			},
+			{
+				segments: [
+					{ kind: 'text', text: 'Improved functionality and service-provider independent through self-container Docker deployment.' },
+				],
+			},
 		],
 	},
 	{
@@ -215,7 +247,11 @@ export const independentProjects: Project[] = [
 		noPrint: true,
 		externalLink: { href: 'https://github.com/shawnphoffman/hospitality-channels', label: 'Hospitality Channels on GitHub' },
 		bullets: [
-			{ segments: [{ kind: 'text', text: 'Self-hosted guest TV channel creation system for hospitality environments like guest rooms and Airbnbs.' }] },
+			{
+				segments: [
+					{ kind: 'text', text: 'Self-hosted guest TV channel creation system for hospitality environments like guest rooms and Airbnbs.' },
+				],
+			},
 			{
 				segments: [
 					{
@@ -298,7 +334,10 @@ export const independentProjects: Project[] = [
 			},
 			{
 				segments: [
-					{ kind: 'text', text: 'Podcast Landing Pages: Powered by NextJS and integrated blogs with Sanity Studio for some friend’s podcasts - ' },
+					{
+						kind: 'text',
+						text: 'Podcast Landing Pages: Powered by NextJS and integrated blogs with Sanity Studio for some friend’s podcasts - ',
+					},
 					{ kind: 'link', text: 'High Potion', href: 'https://myweirdfoot.com' },
 					{ kind: 'text', text: ' / ' },
 					{ kind: 'link', text: 'Blue Harvest', href: 'https://blueharvest.rocks' },
@@ -378,14 +417,14 @@ export const skills: SkillGroup[] = [
 	{ items: ['Postgres', 'SQLite', 'Redis', 'KV'] },
 	{ items: ['REST', 'GraphQL', 'OAuth', 'OWASP'] },
 	{ items: ['HTML', 'CSS', 'Tailwind', 'shadcn'] },
-	{ items: ['NodeJS', 'Docker', 'nginx', 'Caddy'] },
+	{ items: ['NodeJS', 'Docker', 'nginx', 'Traefik'] },
 	{ items: ['React Native', 'Expo', 'Electron'] },
-	{ items: ['Cloudflare', 'S3', 'CloudFront', 'Azure'] },
-	{ items: ['Webpack', 'Jest', 'Enzyme', 'Storybook'] },
-	{ items: ['Git', 'VSCode', 'AI', 'OpenAI', 'Cursor'] },
+	{ items: ['Cloudflare', 'AWS', 'CloudFront', 'Azure'] },
+	{ items: ['Webpack', 'Nitro', 'Storybook', 'Git'] },
+	{ items: ['AI', 'OpenAI', 'Cursor', 'Claude'] },
 	{ items: ['Svelte', 'SvelteKit', 'Vite'] },
-	{ items: ['C#', '.NET Core', '.NET Standard', 'MVC'] },
-	{ items: ['Framer', 'Figma', 'Adobe Creative Suite'] },
+	{ items: ['VSCode', 'C#', '.NET', 'MVC'] },
+	{ items: ['Framer', 'Figma', 'Adobe CS'] },
 ]
 
 export interface HobbySegment {
@@ -411,6 +450,8 @@ export const hobbies: Hobby[] = [
 		],
 	},
 	{
-		segments: [{ text: 'Everything Star Wars, self-hosting, home automation, outdoor activities, road trips, photography, and so much more.' }],
+		segments: [
+			{ text: 'Everything Star Wars, self-hosting, home automation, outdoor activities, road trips, photography, and so much more.' },
+		],
 	},
 ]

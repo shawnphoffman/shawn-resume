@@ -244,6 +244,16 @@
 	}
 }
 
+.positionHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+}
+.positionTitleRow {
+	display: inline;
+}
+
 .positionName {
 	margin: 0;
 	display: inline-block;

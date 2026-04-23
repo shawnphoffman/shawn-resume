@@ -5,7 +5,8 @@ import { skills } from 'app/resume-data'
 export default function Buzzwords() {
 	return (
 		<>
-			<h2 className={styles.sectionHeader}>Buzzwords</h2>
+			<h2 className={`${styles.sectionHeader} ${styles.noPrint}`}>Buzzwords</h2>
+			<h2 className={`${styles.sectionHeader} ${styles.onlyPrint}`}>Technical Skills</h2>
 			<div className={styles.columnedLists}>
 				<ul className={styles.bulletedList}>
 					{skills.map((group, groupIndex) => (

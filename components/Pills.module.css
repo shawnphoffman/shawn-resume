@@ -21,26 +21,32 @@
 	transition: var(--transition);
 }
 
-/* Stays inline in the layout (so Chromium's print-to-PDF keeps it in the
-   text stream between pills), but the glyphs are transparent and scaled
-   to negligible width — visually invisible, extractable as ", ". */
-.srOnly {
-	color: transparent;
-	font-size: 1px;
-	line-height: 1;
-	white-space: pre;
-	user-select: none;
-}
-
-/* @media print {
-	.pills,
-	.pill {
-		display: none;
-	}
-} */
-
 @media only screen and (max-width: 675px) {
 	.pills {
 		display: none;
+	}
+}
+
+/* Print swaps visual pills for a plain-text "Skills:" line in the same
+   slot — parsers see a clean comma-delimited stack instead of the raw
+   pill glyphs, which in Chromium lose spaces between adjacent tags. */
+.skills {
+	display: none;
+	font-size: 11px;
+	text-align: end;
+	align-self: center;
+	flex: 1;
+}
+
+.skillsLabel {
+	font-weight: bold;
+}
+
+@media print {
+	.pills {
+		display: none;
+	}
+	.skills {
+		display: block;
 	}
 }
