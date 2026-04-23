@@ -13,7 +13,6 @@ const Contact = () => {
 		() => ({
 			website: 'https://shawnhoffman.dev',
 			email: typeof window !== 'undefined' ? window.atob('c2hhd25Ac2VudC5hcw==') : '',
-			phone: typeof window !== 'undefined' ? window.atob('MzE3LjYwNC4wMzI1') : '',
 		}),
 		[]
 	)
@@ -27,9 +26,6 @@ const Contact = () => {
 			</a>
 			<a href={`mailto:${contactInfo.email}`} className={styles.contact}>
 				{contactInfo.email}
-			</a>
-			<a href={`tel:${contactInfo.phone}`} className={styles.contact}>
-				{contactInfo.phone}
 			</a>
 		</>
 	)
