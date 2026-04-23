@@ -3,7 +3,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 const BOT_UA =
 	/(googlebot|bingbot|duckduckbot|baiduspider|yandex|applebot(-extended)?|gptbot|chatgpt-user|oai-searchbot|claudebot|claude-web|anthropic-ai|perplexitybot|perplexity-user|ccbot|google-extended|meta-externalagent|bytespider|amazonbot|youbot|cohere-ai|diffbot)/i
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
 	if (req.nextUrl.pathname !== '/') return NextResponse.next()
 	const ua = req.headers.get('user-agent') ?? ''
 	if (!BOT_UA.test(ua)) return NextResponse.next()

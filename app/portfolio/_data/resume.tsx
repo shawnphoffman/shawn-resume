@@ -1,4 +1,10 @@
+import type { StaticImageData } from 'next/image'
 import { GithubIcon, GlobeIcon, MailIcon } from 'lucide-react'
+
+import hoffstuff1 from '@/images/hoffstuff-1.png'
+import wrapt1 from '@/images/wrapt-1.png'
+import medstash1 from '@/images/medstash-dark-1.png'
+import blueskyIcon from '@/images/bluesky-icon.png'
 
 export interface WorkEntry {
 	company: string
@@ -29,8 +35,19 @@ export interface ProjectEntry {
 	description: string
 	technologies: string[]
 	links: { icon: React.ReactNode; type: string; href: string }[]
-	image?: string
+	image?: string | StaticImageData
 	video?: string
+}
+
+export interface VolunteerEntry {
+	organization: string
+	href?: string
+	logoUrl?: string
+	role: string
+	start: string
+	end: string
+	description: string
+	badges?: string[]
 }
 
 export interface ResumeData {
@@ -51,6 +68,7 @@ export interface ResumeData {
 	work: WorkEntry[]
 	education: EducationEntry[]
 	projects: ProjectEntry[]
+	volunteering: VolunteerEntry[]
 }
 
 export const resume: ResumeData = {
@@ -62,7 +80,7 @@ export const resume: ResumeData = {
 	description: 'Software Engineer focused on React, TypeScript, and delightful product UX.',
 	summary:
 		'Independent contract software engineer with 10+ years shipping web products. Most recently at Snow Owl building AI-powered workflow tooling, and before that led front-end decomposition of Coinbase login out of a Rails monolith. I like modernizing crusty codebases, mentoring engineers, and shipping small things at home on the side.',
-	avatarUrl: '/images/shawn.jpg',
+	avatarUrl: 'https://github.com/shawnphoffman.png',
 	skills: [
 		'TypeScript',
 		'React',
@@ -124,6 +142,7 @@ export const resume: ResumeData = {
 		{
 			company: 'Coinbase',
 			href: 'https://coinbase.com',
+			logoUrl: 'https://logo.clearbit.com/coinbase.com',
 			badges: ['React', 'TypeScript', 'React Native'],
 			title: 'Senior Software Engineer',
 			start: 'Oct 2020',
@@ -153,6 +172,8 @@ export const resume: ResumeData = {
 	education: [
 		{
 			school: 'Purdue University',
+			href: 'https://purdue.edu',
+			logoUrl: 'https://logo.clearbit.com/purdue.edu',
 			degree: 'B.S., Computer and Information Technology (School of Technology)',
 			start: '',
 			end: '',
@@ -160,30 +181,32 @@ export const resume: ResumeData = {
 	],
 	projects: [
 		{
+			// TODO: add a public landing page / demo URL for HoffStuff and wire it in as `href`.
+			// Don't link to the private GitHub repo here.
 			title: 'HoffStuff — Family Wish Lists',
-			href: 'https://shawnhoffman.dev',
-			dates: '',
+			dates: '2022 — Present',
 			active: true,
 			description:
 				'Web app for creating and sharing wish lists with family, including gift tracking, spend tracking, and permission rules that keep surprises secret. Fetches product details and images from a pasted URL.',
 			technologies: ['Next.js', 'TypeScript', 'Supabase'],
 			links: [],
-			image: '/images/projects/hoffstuff.png',
+			image: hoffstuff1,
 		},
 		{
+			// TODO: once GiftWrapt has a public repo / landing page / demo, wire it in as `href`.
 			title: 'GiftWrapt',
-			href: 'https://shawnhoffman.dev',
 			dates: 'WIP',
 			active: true,
 			description:
 				'Complete ground-up rewrite of the family wish lists project as a fully open-source, self-hostable Docker deployment.',
 			technologies: ['TanStack', 'TypeScript', 'Postgres', 'Docker'],
 			links: [],
-			image: '/images/projects/wrapt.png',
+			image: wrapt1,
 		},
 		{
 			title: 'Hospitality Channels',
 			href: 'https://github.com/shawnphoffman/hospitality-channels',
+			dates: '2024',
 			active: true,
 			description:
 				'Self-hosted guest TV channel creation system for hospitality environments. Template-driven video clips render to MP4 via headless Chromium + FFmpeg, with built-in Tunarr integration.',
@@ -195,11 +218,12 @@ export const resume: ResumeData = {
 					href: 'https://github.com/shawnphoffman/hospitality-channels',
 				},
 			],
-			video: '/images/projects/hospitality.mp4',
+			video: '/sample-output.mp4',
 		},
 		{
 			title: 'Bluesky Star Wars Feed & Moderation',
 			href: 'https://feed.justshillin.com/',
+			dates: '2024 — Present',
 			active: true,
 			description:
 				'Custom Bluesky feed highlighting great Star Wars content, plus a moderation bot and labeler that flags potential spoilers in the Star Wars community.',
@@ -211,10 +235,12 @@ export const resume: ResumeData = {
 					href: 'https://bsky.app/profile/dev.shawn.party/feed/star-wars',
 				},
 			],
+			image: blueskyIcon,
 		},
 		{
 			title: 'Satisfactory Notebook & Dyson Sphere Planner',
 			href: 'https://satisfactory-notebook.com/',
+			dates: '2022 — Present',
 			active: true,
 			description: 'Printable game companion sites for Satisfactory and Dyson Sphere Program — quick-reference recipe books.',
 			technologies: ['Next.js', 'TypeScript'],
@@ -226,10 +252,38 @@ export const resume: ResumeData = {
 		{
 			title: 'MedStash',
 			href: 'https://github.com/shawnphoffman/medstash',
+			dates: '2024',
 			active: true,
-			description: 'Self-hosted receipt keeper for long-term HSA recordkeeping.',
+			description: 'Self-hosted receipt keeper for long-term HSA recordkeeping — tag, annotate, and export records when you need them.',
 			technologies: ['Next.js', 'TypeScript'],
 			links: [{ icon: <GithubIcon className="size-3" />, type: 'Source', href: 'https://github.com/shawnphoffman/medstash' }],
+			image: medstash1,
+		},
+	],
+	// TODO: flesh out volunteering entries from LinkedIn (dates, role specifics, any
+	// additional orgs). Known: PCTA trail work, foodrecovery.org.
+	volunteering: [
+		{
+			organization: 'Pacific Crest Trail Association',
+			href: 'https://www.pcta.org/',
+			logoUrl: 'https://logo.clearbit.com/pcta.org',
+			role: 'Trail Crew Volunteer',
+			start: '',
+			end: '',
+			description:
+				'Backcountry trail maintenance on the PCT — building staircases, clearing downed trees with crosscut saws, and general tread work to keep the trail passable for hikers and stock.',
+			badges: ['Trail Work'],
+		},
+		{
+			organization: 'Food Recovery Network',
+			href: 'https://foodrecoverynetwork.org/',
+			logoUrl: 'https://logo.clearbit.com/foodrecoverynetwork.org',
+			role: 'Volunteer',
+			start: '',
+			end: '',
+			description:
+				'Helping recover surplus food from local businesses and events and routing it to community partners that serve people in need.',
+			badges: ['Community'],
 		},
 	],
 }

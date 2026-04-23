@@ -14,7 +14,7 @@ export default function PortfolioLayout({ children }: { children: React.ReactNod
 		<ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
 			<div className="portfolio-root min-h-screen">
 				<TooltipProvider delayDuration={0}>
-					<main className="max-w-2xl mx-auto py-12 sm:py-24 px-6">{children}</main>
+					<div className="max-w-2xl mx-auto py-12 sm:py-24 px-6">{children}</div>
 					<Nav />
 				</TooltipProvider>
 			</div>
