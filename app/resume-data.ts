@@ -35,7 +35,7 @@ export const employment: Employment[] = [
 	{
 		company: 'Independent Contractor',
 		pills: ['AI', 'React', 'NextJS', 'Rails'],
-		positions: [{ title: 'Contract Software Engineer', start: 'January 2025', end: 'Current' }],
+		positions: [{ title: 'Contract Software Engineer', start: 'January 2026', end: 'Current' }],
 	},
 	{
 		company: 'Snow Owl',
@@ -181,7 +181,7 @@ export const independentProjects: Project[] = [
 			},
 			{
 				segments: [
-					{ kind: 'text', text: 'User permissions make it possible to coordinate gifts and list managementwhile maintaining secrecy.' },
+					{ kind: 'text', text: 'User permissions make it possible to coordinate gifts and list management while maintaining secrecy.' },
 				],
 			},
 			{
@@ -379,11 +379,11 @@ export const skills: SkillGroup[] = [
 	{ items: ['REST', 'GraphQL', 'OAuth', 'OWASP'] },
 	{ items: ['HTML', 'CSS', 'Tailwind', 'shadcn'] },
 	{ items: ['NodeJS', 'Docker', 'nginx', 'Caddy'] },
-	{ items: ['React Native', 'Expo', 'Electron', 'Cloudflare'] },
+	{ items: ['React Native', 'Expo', 'Electron'] },
 	{ items: ['Cloudflare', 'S3', 'CloudFront', 'Azure'] },
 	{ items: ['Webpack', 'Jest', 'Enzyme', 'Storybook'] },
 	{ items: ['Git', 'VSCode', 'AI', 'OpenAI', 'Cursor'] },
-	{ items: ['Svelte', 'SvelteKit', 'Tailwind', 'Vite'] },
+	{ items: ['Svelte', 'SvelteKit', 'Vite'] },
 	{ items: ['C#', '.NET Core', '.NET Standard', 'MVC'] },
 	{ items: ['Framer', 'Figma', 'Adobe Creative Suite'] },
 ]

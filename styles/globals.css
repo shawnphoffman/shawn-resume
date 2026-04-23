@@ -120,6 +120,11 @@ body {
 	background: var(--background);
 	overflow-x: hidden;
 	width: 100vw;
+	/* Chromium's print-to-PDF emits ligature glyphs (ff, fi, fl) without a
+	   ToUnicode entry, so ATS/LLM text extraction drops or mangles them.
+	   Disable ligatures so each glyph maps 1:1 to its source character. */
+	font-variant-ligatures: none;
+	font-feature-settings: 'liga' 0, 'clig' 0;
 }
 
 a {

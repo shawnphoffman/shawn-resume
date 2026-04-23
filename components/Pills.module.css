@@ -21,6 +21,17 @@
 	transition: var(--transition);
 }
 
+/* Stays inline in the layout (so Chromium's print-to-PDF keeps it in the
+   text stream between pills), but the glyphs are transparent and scaled
+   to negligible width — visually invisible, extractable as ", ". */
+.srOnly {
+	color: transparent;
+	font-size: 1px;
+	line-height: 1;
+	white-space: pre;
+	user-select: none;
+}
+
 /* @media print {
 	.pills,
 	.pill {
