@@ -6,7 +6,7 @@
 		"@awesome.me/kit-94ef14ccff": "^1.0.45",
 		"@fortawesome/fontawesome-svg-core": "^7.2.0",
 		"@fortawesome/react-fontawesome": "^3.3.0",
-		"@icons-pack/react-simple-icons": "13.8.0",
+		"@icons-pack/react-simple-icons": "^13.13.0",
 		"@mdx-js/loader": "^3.1.0",
 		"@mdx-js/react": "^3.1.0",
 		"@next/mdx": "^16.2.3",
@@ -38,6 +38,9 @@
 		"start": "next start",
 		"lint": "next lint",
 		"type-check": "tsc --noEmit"
+	},
+	"engines": {
+		"node": ">=24"
 	},
 	"browserslist": {
 		"production": [
