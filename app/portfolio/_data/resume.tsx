@@ -142,7 +142,6 @@ export const resume: ResumeData = {
 		{
 			company: 'Coinbase',
 			href: 'https://coinbase.com',
-			logoUrl: 'https://logo.clearbit.com/coinbase.com',
 			badges: ['React', 'TypeScript', 'React Native'],
 			title: 'Senior Software Engineer',
 			start: 'Oct 2020',
@@ -173,7 +172,6 @@ export const resume: ResumeData = {
 		{
 			school: 'Purdue University',
 			href: 'https://purdue.edu',
-			logoUrl: 'https://logo.clearbit.com/purdue.edu',
 			degree: 'B.S., Computer and Information Technology (School of Technology)',
 			start: '',
 			end: '',
@@ -197,8 +195,7 @@ export const resume: ResumeData = {
 			title: 'GiftWrapt',
 			dates: 'WIP',
 			active: true,
-			description:
-				'Complete ground-up rewrite of the family wish lists project as a fully open-source, self-hostable Docker deployment.',
+			description: 'Complete ground-up rewrite of the family wish lists project as a fully open-source, self-hostable Docker deployment.',
 			technologies: ['TanStack', 'TypeScript', 'Postgres', 'Docker'],
 			links: [],
 			image: wrapt1,
@@ -266,10 +263,9 @@ export const resume: ResumeData = {
 		{
 			organization: 'Pacific Crest Trail Association',
 			href: 'https://www.pcta.org/',
-			logoUrl: 'https://logo.clearbit.com/pcta.org',
 			role: 'Trail Crew Volunteer',
 			start: '',
-			end: '',
+			end: 'Present',
 			description:
 				'Backcountry trail maintenance on the PCT — building staircases, clearing downed trees with crosscut saws, and general tread work to keep the trail passable for hikers and stock.',
 			badges: ['Trail Work'],
@@ -277,10 +273,9 @@ export const resume: ResumeData = {
 		{
 			organization: 'Food Recovery Network',
 			href: 'https://foodrecoverynetwork.org/',
-			logoUrl: 'https://logo.clearbit.com/foodrecoverynetwork.org',
 			role: 'Volunteer',
 			start: '',
-			end: '',
+			end: 'Present',
 			description:
 				'Helping recover surplus food from local businesses and events and routing it to community partners that serve people in need.',
 			badges: ['Community'],

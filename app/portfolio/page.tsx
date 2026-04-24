@@ -11,6 +11,7 @@ import { resume } from './_data/resume'
 import { BlurFadeText } from '@/components/magicui/blur-fade-text'
 import { FlickeringGrid } from '@/components/magicui/flickering-grid'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Badge } from '@/components/ui/badge'
 
 const BLUR_FADE_DELAY = 0.04
 
@@ -128,9 +129,7 @@ export default function PortfolioPage() {
 								<div className="flex-1 h-px bg-gradient-to-l from-transparent via-border to-transparent" />
 							</div>
 							<div className="flex flex-col gap-y-3 items-center justify-center">
-								<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-center">
-									Things I&apos;ve built for fun
-								</h2>
+								<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-center">Things I&apos;ve built for fun</h2>
 								<p className="text-muted-foreground md:text-lg/relaxed text-balance text-center max-w-[600px]">
 									A collection of side projects, tools, and experiments — some shipped publicly, some just scratching my own itch.
 								</p>
@@ -176,44 +175,38 @@ export default function PortfolioPage() {
 							</div>
 						</div>
 						<Timeline>
-							{resume.volunteering.map(v => (
-								<TimelineItem key={v.organization} className="w-full flex items-start justify-between gap-10">
-									<TimelineConnectItem className="flex items-start justify-center">
-										{v.logoUrl ? (
-											// eslint-disable-next-line @next/next/no-img-element
-											<img
-												src={v.logoUrl}
-												alt={v.organization}
-												className="size-10 bg-card z-10 shrink-0 overflow-hidden p-1 border rounded-full shadow ring-2 ring-border object-contain flex-none"
-											/>
-										) : (
-											<div className="size-10 bg-card z-10 shrink-0 overflow-hidden p-1 border rounded-full shadow ring-2 ring-border flex-none" />
-										)}
-									</TimelineConnectItem>
-									<div className="flex flex-1 flex-col justify-start gap-2 min-w-0">
-										{v.start || v.end ? (
-											<time className="text-xs text-muted-foreground">
-												{v.start}
-												{v.start && v.end ? ' — ' : ''}
-												{v.end}
-											</time>
-										) : null}
-										<h3 className="font-semibold leading-none">{v.organization}</h3>
-										<p className="text-sm text-muted-foreground">{v.role}</p>
-										<p className="text-sm text-muted-foreground leading-relaxed">{v.description}</p>
-										{v.href ? (
-											<Link
-												href={v.href}
-												target="_blank"
-												rel="noopener noreferrer"
-												className="text-xs text-blue-500 hover:underline underline-offset-4 w-fit"
-											>
-												Learn more →
-											</Link>
-										) : null}
-									</div>
-								</TimelineItem>
-							))}
+							{resume.volunteering.map(v => {
+								const dateLine = [v.start, v.end].filter(Boolean).join(' - ')
+								return (
+									<TimelineItem key={v.organization} className="w-full flex items-start justify-between gap-6">
+										<TimelineConnectItem className="flex items-start justify-center">
+											<div className="size-10 bg-card z-10 shrink-0 overflow-hidden p-1 border rounded-full shadow ring-2 ring-border flex-none flex items-center justify-center text-xs font-medium text-muted-foreground">
+												{v.organization[0]}
+											</div>
+										</TimelineConnectItem>
+										<div className="flex flex-1 flex-col justify-start gap-2 min-w-0">
+											{dateLine ? <time className="text-xs text-muted-foreground">{dateLine}</time> : null}
+											<h3 className="font-semibold leading-none">{v.organization}</h3>
+											<p className="text-sm text-muted-foreground">{v.role}</p>
+											<p className="text-sm text-muted-foreground leading-relaxed">{v.description}</p>
+											<div className="flex flex-wrap items-center gap-2 pt-1">
+												{v.badges?.map(badge => (
+													<Badge key={badge} className="text-[10px] font-medium border border-border h-6 w-fit px-2" variant="outline">
+														{badge}
+													</Badge>
+												))}
+												{v.href ? (
+													<Link href={v.href} target="_blank" rel="noopener noreferrer">
+														<Badge className="flex items-center gap-1.5 text-xs bg-black text-white hover:bg-black/90" variant="default">
+															Learn more
+														</Badge>
+													</Link>
+												) : null}
+											</div>
+										</div>
+									</TimelineItem>
+								)
+							})}
 						</Timeline>
 					</div>
 				</BlurFade>

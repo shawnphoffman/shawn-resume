@@ -1,6 +1,13 @@
-import { Bungee_Inline, Open_Sans } from 'next/font/google'
+import { Bungee_Inline, Inter, Open_Sans } from 'next/font/google'
 
 export const openSans = Open_Sans({ subsets: ['latin'], style: ['normal'], display: 'swap', preload: true })
+
+export const inter = Inter({
+	subsets: ['latin'],
+	variable: '--font-inter',
+	display: 'swap',
+	preload: true,
+})
 
 export const bungeeInline = Bungee_Inline({
 	subsets: ['latin'],

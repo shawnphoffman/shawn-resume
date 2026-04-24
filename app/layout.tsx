@@ -4,7 +4,7 @@ import 'yet-another-react-lightbox/styles.css'
 
 import { Analytics } from '@vercel/analytics/react'
 
-import { bungeeInline, openSans } from 'app/fonts'
+import { bungeeInline, inter, openSans } from 'app/fonts'
 import { buildPersonJsonLd } from 'app/json-ld'
 
 export const metadata = {
@@ -27,7 +27,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
 	const personJsonLd = buildPersonJsonLd()
 	return (
-		<html lang="en" className={`${openSans.className} ${bungeeInline.variable}`}>
+		<html lang="en" className={`${openSans.className} ${bungeeInline.variable} ${inter.variable}`}>
 			<body className="theme-dark">
 				<div>{children}</div>
 				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
