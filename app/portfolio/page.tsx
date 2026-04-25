@@ -135,9 +135,9 @@ export default function PortfolioPage() {
 								</p>
 							</div>
 						</div>
-						<div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto auto-rows-fr w-full">
+						<div className="columns-1 sm:columns-2 gap-3 max-w-[800px] mx-auto w-full [column-fill:_balance]">
 							{resume.projects.map((project, id) => (
-								<BlurFade key={project.title} delay={BLUR_FADE_DELAY * 12 + id * 0.05} className="h-full">
+								<BlurFade key={project.title} delay={BLUR_FADE_DELAY * 12 + id * 0.05} className="mb-3 break-inside-avoid block">
 									<ProjectCard
 										href={project.href}
 										title={project.title}

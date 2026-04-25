@@ -44,7 +44,7 @@ export function ProjectCard({ title, href, description, dates, tags, image, vide
 	return (
 		<div
 			className={cn(
-				'flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 hover:ring-muted transition-all duration-200',
+				'flex flex-col border border-border rounded-xl overflow-hidden hover:ring-2 hover:ring-muted transition-all duration-200',
 				href ? 'cursor-pointer' : '',
 				className
 			)}
@@ -62,17 +62,8 @@ export function ProjectCard({ title, href, description, dates, tags, image, vide
 				{links && links.length > 0 ? (
 					<div className="absolute top-2 right-2 flex flex-wrap gap-2">
 						{links.map((link, idx) => (
-							<Link
-								href={link.href}
-								key={idx}
-								target="_blank"
-								rel="noopener noreferrer"
-								onClick={e => e.stopPropagation()}
-							>
-								<Badge
-									className="flex items-center gap-1.5 text-xs bg-black text-white hover:bg-black/90"
-									variant="default"
-								>
+							<Link href={link.href} key={idx} target="_blank" rel="noopener noreferrer" onClick={e => e.stopPropagation()}>
+								<Badge className="flex items-center gap-1.5 text-xs bg-black text-white hover:bg-black/90" variant="default">
 									{link.icon}
 									{link.type}
 								</Badge>
