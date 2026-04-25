@@ -215,7 +215,7 @@ export default function PortfolioPage() {
 			{/* Contact */}
 			<section id="contact">
 				<BlurFade delay={BLUR_FADE_DELAY * 16}>
-					<div className="border rounded-xl p-10 relative overflow-hidden">
+					<div className="border rounded-xl p-10 relative">
 						<div className="absolute -top-4 border bg-primary z-10 rounded-xl px-4 py-1 left-1/2 -translate-x-1/2">
 							<span className="text-background text-sm font-medium">Contact</span>
 						</div>

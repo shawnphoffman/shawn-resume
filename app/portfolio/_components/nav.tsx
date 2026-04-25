@@ -8,7 +8,6 @@ import { resume } from '../_data/resume'
 import { Dock, DockIcon } from '@/components/magicui/dock'
 import { Separator } from '@/components/ui/separator'
 import { Tooltip, TooltipArrow, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-import { cn } from '@/lib/utils'
 
 const navItems = [
 	{ href: '/portfolio', icon: HomeIcon, label: 'Home' },
@@ -16,9 +15,7 @@ const navItems = [
 ]
 
 const dockIconClass =
-	'rounded-3xl size-full bg-background p-0 text-muted-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors'
-
-const iconButtonClass = 'flex items-center justify-center rounded-3xl size-full'
+	'rounded-3xl cursor-pointer size-full bg-background p-0 text-muted-foreground hover:text-foreground hover:bg-muted backdrop-blur-3xl border border-border transition-colors [&_svg]:size-full'
 
 function ThemeToggleButton() {
 	const { resolvedTheme, setTheme } = useTheme()
@@ -27,10 +24,10 @@ function ThemeToggleButton() {
 			type="button"
 			aria-label="Toggle theme"
 			onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-			className="relative flex items-center justify-center size-full rounded-3xl"
+			className="relative flex items-center justify-center size-full"
 		>
-			<SunIcon className="size-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-			<MoonIcon className="absolute size-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+			<SunIcon className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+			<MoonIcon className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
 		</button>
 	)
 }
@@ -45,7 +42,7 @@ export function Nav() {
 							<TooltipTrigger asChild>
 								<Link href={item.href} aria-label={item.label}>
 									<DockIcon className={dockIconClass}>
-										<item.icon className="size-full p-2" />
+										<item.icon />
 									</DockIcon>
 								</Link>
 							</TooltipTrigger>
@@ -66,9 +63,7 @@ export function Nav() {
 							<Tooltip key={key}>
 								<TooltipTrigger asChild>
 									<Link href={social.url} target="_blank" rel="noreferrer" aria-label={social.name}>
-										<DockIcon className={dockIconClass}>
-											<span className={cn(iconButtonClass, 'p-2')}>{social.icon}</span>
-										</DockIcon>
+										<DockIcon className={dockIconClass}>{social.icon}</DockIcon>
 									</Link>
 								</TooltipTrigger>
 								<TooltipContent
@@ -84,7 +79,7 @@ export function Nav() {
 					<Separator orientation="vertical" className="h-2/3 m-auto w-px bg-border" />
 					<Tooltip>
 						<TooltipTrigger asChild>
-							<DockIcon className={cn(dockIconClass, 'cursor-pointer')}>
+							<DockIcon className={dockIconClass}>
 								<ThemeToggleButton />
 							</DockIcon>
 						</TooltipTrigger>
