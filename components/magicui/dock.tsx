@@ -40,10 +40,7 @@ const Dock = ({ className, children, magnification = DEFAULT_MAGNIFICATION, dist
 			<motion.div
 				onMouseMove={e => mouseX.set(e.pageX)}
 				onMouseLeave={() => mouseX.set(Infinity)}
-				className={cn(
-					'mx-auto w-max h-full flex items-end justify-center overflow-visible rounded-full border',
-					className
-				)}
+				className={cn('mx-auto w-max h-full flex items-center justify-center overflow-visible rounded-full border', className)}
 			>
 				{children}
 			</motion.div>
@@ -66,10 +63,7 @@ const DockIcon = ({ className, children }: DockIconProps) => {
 		return val - bounds.x - bounds.width / 2
 	})
 
-	const containerSize = useSpring(
-		useTransform(distanceCalc, [-distance, 0, distance], [BASE_SIZE, magnification, BASE_SIZE]),
-		SPRING
-	)
+	const containerSize = useSpring(useTransform(distanceCalc, [-distance, 0, distance], [BASE_SIZE, magnification, BASE_SIZE]), SPRING)
 	const iconSize = useSpring(
 		useTransform(distanceCalc, [-distance, 0, distance], [BASE_ICON_SIZE, magnification * ICON_SIZE_RATIO, BASE_ICON_SIZE]),
 		SPRING

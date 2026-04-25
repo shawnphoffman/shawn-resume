@@ -156,7 +156,7 @@ export default function PortfolioPage() {
 			</section>
 
 			{/* Volunteering */}
-			<section id="volunteering" className="overflow-hidden">
+			<section id="volunteering">
 				<BlurFade delay={BLUR_FADE_DELAY * 13}>
 					<div className="flex min-h-0 flex-col gap-y-8 w-full">
 						<div className="flex flex-col gap-y-4 items-center justify-center">
