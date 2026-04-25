@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function PortfolioLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+		<ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
 			<div className="portfolio-root relative min-h-screen">
 				<div className="pointer-events-none absolute inset-x-0 top-0 h-[100px] overflow-hidden z-0">
 					<FlickeringGrid

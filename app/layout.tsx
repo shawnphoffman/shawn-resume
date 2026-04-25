@@ -27,7 +27,12 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
 	const personJsonLd = buildPersonJsonLd()
 	return (
-		<html lang="en" className={`${openSans.className} ${bungeeInline.variable} ${inter.variable}`}>
+		<html
+			lang="en"
+			suppressHydrationWarning
+			className={`${openSans.className} ${bungeeInline.variable} ${inter.variable} dark`}
+			style={{ colorScheme: 'dark' }}
+		>
 			<body className="theme-dark">
 				<div>{children}</div>
 				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
